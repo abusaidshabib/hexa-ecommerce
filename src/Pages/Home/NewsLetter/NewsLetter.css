@@ -1,0 +1,17 @@
+.subscribe_div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background-color: var(--textColor);
+  color: var(--bgColor);
+  text-align: center;
+}
+
+.subscribe_div h1 {
+  font-size: var(--font48);
+}
+
+.subscribe_div p{
+  font-size: var(--font24);
+}

@@ -57,4 +57,12 @@
 .menu{
   text-decoration: none;
   color: var(--textColor);
+  font-size: var(--font16);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.menu:hover{
+  color: var(--hoverColor);
 }
