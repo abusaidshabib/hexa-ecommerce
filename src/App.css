@@ -1,13 +1,83 @@
+:root {
+
+  /* All colors */
+  --bgExColor: #2D4263;
+  --bgColor: #ECDBBA;
+  --hoverColor: #C84B31;
+  --textColor: #191919;
+
+  /* font_family */
+  --helvetica_Neu: 'Helvetica Neue',
+    sans-serif;
+  --roboto: 'roboto', sans-serif;
+  --philosoper: 'Philosopher',
+    sans-serif;
+
+  /* Font Size */
+  --font10: 1rem;
+  --font12: 1.2rem;
+  --font16: 1.6rem;
+  --font18: 1.8rem;
+  --font20: 2rem;
+  --font22: 2.2rem;
+  --font24: 2.4rem;
+  --font30: 3rem;
+  --font34: 3.4rem;
+  --font38: 3.8rem;
+  --font80: 8rem;
+
+
+  /* paddings */
+  --bothGaps: 0 8rem;
+
+  /* margin */
+  --marginLeft: 3rem;
+
+}
+
+/* Font_sizes */
+.title2{
+  font-size: var(--font34);
+  font-weight: 500;
+  color: var(--textColor)
+}
+
+.card_title{
+  font-size: var(--font16);
+  color: var(--textColor);
+}
+
+.card_price{
+  font-size: var(--font16);
+  color: var(--textColor);
+  font-weight: 600;
+}
+
+/* buttons */
+.btn_type1 {
+  color: var(--textColor);
+  text-decoration: none;
+  background-color: var(--bgColor);
+  text-transform: uppercase;
+  padding: 1.2rem 2.8rem;
+  border-radius: 1rem;
+  font-family: var(--helvetica_Neu);
+  font-size: var(--font20);
+  font-weight: 600;
+}
+
+
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -35,4 +105,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

@@ -1,0 +1,34 @@
+.card_collection{
+  margin: var(--bothGaps);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.single_collection{
+  width: 560px;
+  height: 350px;
+  position: relative;
+}
+
+.collection_img{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(61, 61, 61, 0.096);
+  border-radius: 20px;
+}
+
+.collection_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  mix-blend-mode: darken;
+}
+
+.collection_content{
+  position: absolute;
+  top: 50%;
+  padding-left: 30px;
+}

@@ -1,0 +1,1 @@
+<h2 className='title2'>Top Selling Brand</h2>

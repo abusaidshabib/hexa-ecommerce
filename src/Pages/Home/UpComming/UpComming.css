@@ -1,0 +1,17 @@
+.up_Coming {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  position: relative;
+}
+
+.up_Coming video{
+  width: 100%;
+  height: 100%;
+}
+
+.up_coming_content{
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.555);
+}

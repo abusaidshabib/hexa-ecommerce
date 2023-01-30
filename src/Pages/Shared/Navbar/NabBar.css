@@ -1,0 +1,60 @@
+.nav_div {
+  width: 100%;
+  height: 13vh;
+  background-color: var(--bgColor);
+  color: var(--bgColor);
+}
+
+.main_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--bothGaps);
+  background-color: var(--textColor);
+  height: 8vh;
+}
+
+.logo {
+  font-size: var(--marginLeft);
+  font-weight: 700;
+  font-family: var(--philosoper);
+  line-height: 0;
+}
+
+.icons_div {
+  color: var(--bgColor);
+  font-size: var(--font22);
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-left: var(--font30);
+}
+
+.mega_menu{
+  background-color: var(--bgColor);
+  height: 5vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.mega_menu ul{
+  display: flex;
+  
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega_menu ul li{
+  margin: 0 2.4rem;
+  font-size: 1.6rem;
+}
+
+.menu{
+  text-decoration: none;
+  color: var(--textColor);
+}

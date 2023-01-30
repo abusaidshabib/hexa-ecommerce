@@ -1,0 +1,5 @@
+.feature_blog{
+  height: 50vh;
+  padding: 50px;
+  background-color: var(--bgColor);
+}

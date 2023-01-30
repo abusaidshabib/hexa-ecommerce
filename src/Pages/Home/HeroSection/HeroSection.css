@@ -1,0 +1,63 @@
+.carousel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  position: absolute;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-blend-mode: overlay;
+}
+
+.main_title {
+  font-size: 10rem;
+  text-transform: uppercase;
+  font-family: var(--helvetica_Neu);
+  color: var(--bgColor);
+}
+
+.hero_regular {
+  font-size: var(--font22);
+  color: var(--bgColor);
+}
+
+.hero_content {
+  padding: var(--bothGaps);
+}
+
+.carousel .navigation{
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel .navigation .btn{
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* slide */
+
+
+.slide1 {
+  background-image: url("../../../assets/HeroBackground2.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+}
+
+.slide2 {
+  background-image: url("../../../assets/HeroBackground1.jpeg"), linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+}

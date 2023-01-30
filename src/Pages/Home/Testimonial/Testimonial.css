@@ -1,0 +1,36 @@
+.testimonial_div {
+  display: grid;
+  align-items: center;
+  margin: var(--bothGaps);
+  text-align: center;
+  height: 50vh;
+  text-align: center;
+}
+
+.testimonial_content {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial_content img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ratings_testimonial{
+  font-size: var(--font20);
+  display: flex;
+  justify-content: center;
+}
+
+.icons_test{
+  padding: 0 .5rem;
+}
+
+.test_des{
+  font-size: var(--font24);
+  text-align: center;
+}
