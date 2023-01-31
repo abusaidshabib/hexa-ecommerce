@@ -19,7 +19,7 @@ const NavBar = () => {
       <div className='mega_menu'>
         <ul>
           <li>
-            <Link to="/" className='menu'>Home</Link>
+            <Link to="/home" className='menu'>Home</Link>
           </li>
           <li>
             <Link to="/" className='menu'>Catalog</Link>
@@ -40,7 +40,7 @@ const NavBar = () => {
             <Link to="/" className='menu'>Shop</Link>
           </li>
           <li>
-            <Link to="/" className='menu'>FAQ's</Link>
+            <Link to="/faq" className='menu'>FAQ's</Link>
           </li>
         </ul>
       </div>
