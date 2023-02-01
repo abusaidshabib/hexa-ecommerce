@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ApiDataContext } from '../../../Context/ApiContext/ApiContext';
 import './HeroSection.css';
@@ -6,7 +6,8 @@ import './HeroSection.css';
 const HeroSection = () => {
 
   const { heroData } = useContext(ApiDataContext);
-  console.log(heroData);
+  const [position, setPosition] = useState(null);
+  console.log(position);
 
   return (
     <div className='carousel'>
@@ -39,11 +40,11 @@ const HeroSection = () => {
         </div>
       </div>
       <div className='navigation'>
-        <div className="btn"></div>
-        <div className="btn"></div>
-        <div className="btn"></div>
-        <div className="btn"></div>
-        <div className="btn"></div>
+        <div className="btn" onClick={()=> setPosition(1)}></div>
+        <div className="btn" onClick={()=> setPosition(2)}></div>
+        <div className="btn" onClick={()=> setPosition(3)}></div>
+        <div className="btn" onClick={()=> setPosition(4)}></div>
+        <div className="btn" onClick={()=> setPosition(5)}></div>
       </div>
     </div>
   );

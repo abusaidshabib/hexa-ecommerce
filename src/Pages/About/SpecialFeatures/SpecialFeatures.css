@@ -1,0 +1,14 @@
+.SpecialFeature_div{
+  background-color: var(--shadowColor);
+  height: 20vh;
+  font-size: var(--font22);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+}
+
+.feature_icons{
+  font-size: var(--font48);
+}

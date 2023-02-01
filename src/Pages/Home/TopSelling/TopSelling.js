@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ApiDataContext } from '../../../Context/ApiContext/ApiContext';
+import ProductCard from './ProductCard';
 import './TopSelling.css';
 
 const TopSelling = () => {
@@ -13,13 +14,7 @@ const TopSelling = () => {
       <div className='top_selling_grid'>
         {
           products.slice(0, 10).map(product => (
-            <div>
-              <div className='card_img_div'>
-                <img src={product.images[1]} alt="" />
-              </div>
-              <p className='card_title'>{product.title}</p>
-              <p className='card_price'>${product.price}</p>
-            </div>
+            <ProductCard product={product}></ProductCard>
           ))
         }
       </div>

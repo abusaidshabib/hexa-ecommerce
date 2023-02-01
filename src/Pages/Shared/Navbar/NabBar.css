@@ -3,6 +3,7 @@
   height: 13vh;
   background-color: var(--bgColor);
   color: var(--bgColor);
+  position: relative;
 }
 
 .main_nav {
@@ -15,10 +16,17 @@
 }
 
 .logo {
+  text-decoration: none;
+  color: var(--bgColor);
   font-size: var(--marginLeft);
   font-weight: 700;
   font-family: var(--philosoper);
   line-height: 0;
+}
+
+.nav_main_icons {
+  text-decoration: none;
+  color: var(--bgColor);
 }
 
 .icons_div {
@@ -32,7 +40,7 @@
   margin-left: var(--font30);
 }
 
-.mega_menu{
+.mega_menu {
   background-color: var(--bgColor);
   height: 5vh;
   display: grid;
@@ -40,21 +48,21 @@
   align-items: center;
 }
 
-.mega_menu ul{
+.mega_menu ul {
   display: flex;
-  
+
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.mega_menu ul li{
+.mega_menu ul li {
   margin: 0 2.4rem;
   font-size: 1.6rem;
 }
 
-.menu{
+.menu {
   text-decoration: none;
   color: var(--textColor);
   font-size: var(--font16);
@@ -63,6 +71,49 @@
   font-weight: 500;
 }
 
-.menu:hover{
+.menu:hover {
   color: var(--hoverColor);
+}
+
+
+/* Icon div section */
+.search_nav {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  min-height: 10vh;
+  background-color: #fff;
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_nav input {
+  width: 50%;
+  border: none;
+  font-size: var(--font24);
+  padding: 10px;
+  border-bottom: 1px solid var(--textColor);
+}
+
+.search_nav input:focus {
+  outline: none;
+}
+
+.search_btn_open {
+  text-decoration: none;
+  font-size: var(--font18);
+  text-transform: uppercase;
+  padding: 15px 40px;
+  background-color: var(--textColor);
+  color: var(--bgColor);
+}
+
+.search_btn_open:hover{
+  background-color: var(--hoverColor);
+}
+
+.search_nav.active{
+  display: flex;
 }

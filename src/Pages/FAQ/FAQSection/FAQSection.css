@@ -1,0 +1,26 @@
+.faq_section {
+  padding: 50px 350px;
+}
+
+.faq_section div {
+  border: 2px solid var(--textColor);
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.faq_section h1 {
+  color: var(--bgColor);
+  background-color: var(--textColor);
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+  font-size: var(--font24);
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq_section p{
+  padding: 0px 15px;
+  font-size: var(--font18);
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import useTitle from '../../../hook/UseTitle/UseTitle';
 import CollectionsCard from '../CollectionsCard/CollectionsCard';
 import FeatureBlog from '../FeatureBlog/FeatureBlog';
 import HeroSection from '../HeroSection/HeroSection';
@@ -8,6 +9,9 @@ import TopSelling from '../TopSelling/TopSelling';
 import UpComming from '../UpComming/UpComming';
 
 const Home = () => {
+
+  useTitle("Home")
+
   return (
     <div>
       <HeroSection></HeroSection>
