@@ -1,17 +1,20 @@
 [
   {
-    "title": "seamless sports <br/> leisurewear",
+    "id": 1,
+    "title": "seamless sports leisurewear",
     "paragraph": "stay organized and secure with our line of instrument bags.",
-    "class": "slide1"
+    "class": "slide1 slider"
   },
   {
-    "title": "Protect your <br/> instruments ",
+    "id": 2,
+    "title": "Protect your instruments ",
     "paragraph": "Travel in ease with our line.",
-    "class": "slide2"
+    "class": "slide2 slider"
   },
   {
-    "title": "Experience of <br/> instrument protection",
+    "id": 3,
+    "title": "Experience of instrument protection",
     "paragraph": "stay organized and secure with our line of instrument bags.",
-    "class": "slide3"
+    "class": "slide3 slider"
   }
 ]

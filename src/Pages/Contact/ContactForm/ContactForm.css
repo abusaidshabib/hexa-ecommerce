@@ -30,7 +30,7 @@
   padding: 20px 0;
   border-radius: 5px;
   font-size: var(--font24);
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: var(--helvetica_Neu);
   border: none;
 }

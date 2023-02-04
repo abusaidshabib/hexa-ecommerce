@@ -3,6 +3,7 @@ import './NabBar.css';
 import { FiSearch } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { BsCart3 } from "react-icons/bs";
+import { RxCross1 } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
@@ -15,17 +16,17 @@ const NavBar = () => {
       <div className='main_nav'>
         <Link to="/" className='logo'>HEXA</Link>
         <div className='icons_div'>
-          <Link to="" className='nav_main_icons'
+          <button className='nav_main_icons'
             onClick={() => setSearch(!search)} >
-            <FiSearch className='icon' /></Link>
-          <Link to="" className='nav_main_icons'
+            <FiSearch className='icon' /></button>
+          <Link to="/dashboard" className='nav_main_icons'
             onClick={() => setProfile(!profile)}>
             <CgProfile className='icon' />
           </Link>
-          <Link to="" className='nav_main_icons'
+          <button className='nav_main_icons'
             onClick={() => setCart(!cart)}>
             <BsCart3 className='icon' />
-          </Link>
+          </button>
         </div>
       </div>
       <div className='mega_menu'>
@@ -54,16 +55,19 @@ const NavBar = () => {
           <li>
             <Link to="/faq" className='menu'>FAQ's</Link>
           </li>
+          <li>
+            <Link className='menu' to="/login">Login/</Link>
+            <Link className='menu' to="/register">Register</Link>
+          </li>
         </ul>
       </div>
       <div className={search ? "search_nav active" : "search_nav"}>
         <input type="search" name="search" id="" />
-        <Link className='search_btn_open' to="/">Search</Link>
+        <Link className='search_btn_open' to="">Search</Link> <RxCross1 className='cross_btn' onClick={() => setSearch(!search)}/>
       </div>
 
       <div className={profile ? "profile_nav active" : "search_nav"}>
-        <input type="search" name="search" id="" />
-        <Link className='search_btn_open' to="/">Search</Link>
+        
       </div>
 
       <div className={cart ? "cart_nav active" : "search_nav"}>

@@ -19,7 +19,7 @@ const ContactForm = () => {
         <label htmlFor="message">Enter Your Message</label><br />
         <textarea rows="" cols="" type="text" name='message' id="message" placeholder='Enter Your Message'></textarea>
 
-        <input className='submit_btn_form' type="submit" value="send message" />
+        <input className='submit_btn_form' type="submit" value="Send message" />
       </form>
       <div>
         <h3 className='title2'>Support</h3>

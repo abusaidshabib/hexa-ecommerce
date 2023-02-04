@@ -1,0 +1,37 @@
+.login_div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.icon_btn_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  border: 1px solid var(--textColor);
+  padding: 12px 0;
+  font-size: var(--font22);
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+.end{
+  display: flex;
+  justify-content: end;
+}
+
+.btn_ico {
+  padding-right: 10px;
+  font-size: var(--font38);
+}
+
+.forgot_pass {
+  font-size: var(--font22);
+  line-height: 60px;
+  color: var(--bgExColor);
+}
+
+.forgot_pass:hover {
+  text-decoration: none;
+}

@@ -6,45 +6,36 @@ import './HeroSection.css';
 const HeroSection = () => {
 
   const { heroData } = useContext(ApiDataContext);
-  const [position, setPosition] = useState(null);
-  console.log(position);
+  const [slideIndex, setSlideIndex] = useState(1);
+
+  const moveDot = index => {
+    setSlideIndex(index)
+  }
 
   return (
-    <div className='carousel'>
-      <div className='slide1 slider'>
-        <div className='hero_content'>
-          <h1 className='main_title'>Protect your <br />instruments</h1>
-          <p className='hero_regular'>Stay organized and secure with our line of instrument bags.</p><br />
-          <Link className='btn_type1' to="/">Shop Now</Link>
-        </div>
-      </div>
-      <div className='slide2 slider'>
-        <div className='hero_content'>
-          <h1 className='main_title'>Protect your <br />instruments</h1>
-          <p className='hero_regular'>Stay organized and secure with our line of instrument bags.</p><br />
-          <Link className='btn_type1' to="/">Shop Now</Link>
-        </div>
-      </div>
-      <div className='slide3 slider'>
-        <div className='hero_content'>
-          <h1 className='main_title'>Protect your <br />instruments</h1>
-          <p className='hero_regular'>Stay organized and secure with our line of instrument bags.</p><br />
-          <Link className='btn_type1' to="/">Shop Now</Link>
-        </div>
-      </div>
-      <div className='slide4 slider'>
-        <div className='hero_content'>
-          <h1 className='main_title'>Protect your <br />instruments</h1>
-          <p className='hero_regular'>Stay organized and secure with our line of instrument bags.</p><br />
-          <Link className='btn_type1' to="/">Shop Now</Link>
-        </div>
-      </div>
-      <div className='navigation'>
-        <div className="btn" onClick={()=> setPosition(1)}></div>
-        <div className="btn" onClick={()=> setPosition(2)}></div>
-        <div className="btn" onClick={()=> setPosition(3)}></div>
-        <div className="btn" onClick={()=> setPosition(4)}></div>
-        <div className="btn" onClick={()=> setPosition(5)}></div>
+
+    <div className="carousel">
+      {heroData.map((obj, index) => {
+        return (
+          <div
+            key={obj.id}
+            className={`${obj.class} ${slideIndex === index + 1? "active": "" }`}>
+            <div className='hero_content'>
+              <h1 className='main_title'>{obj.title}</h1>
+              <p className='hero_regular'>{obj.title}</p>
+              <Link className='btn_type1' to="/">Shop now</Link>
+            </div>
+          </div>
+        )
+      })}
+
+      <div className="navigation">
+        {Array.from({ length: 3 }).map((item, index) => (
+          <div
+            onClick={() => moveDot(index + 1)}
+            className={slideIndex === index + 1 ? "btn active" : "btn"}
+          ></div>
+        ))}
       </div>
     </div>
   );
