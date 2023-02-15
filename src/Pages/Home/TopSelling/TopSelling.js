@@ -6,7 +6,6 @@ import './TopSelling.css';
 const TopSelling = () => {
 
   const { products } = useContext(ApiDataContext)
-  console.log(products);
 
   return (
     <div className='top_selling'>
@@ -14,7 +13,7 @@ const TopSelling = () => {
       <div className='top_selling_grid'>
         {
           products.slice(0, 10).map(product => (
-            <ProductCard product={product}></ProductCard>
+            <ProductCard key={product._id} product={product}></ProductCard>
           ))
         }
       </div>

@@ -1,0 +1,17 @@
+.btn_div{
+  display: flex;
+  justify-content: end;
+  padding: 20px 0;
+}
+
+.dash_btn1{
+  text-decoration: none;
+  font-size: var(--font18);
+  color: var(--bgColor);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--helvetica_Neu);
+  padding: 10px 26px;
+  background-color: var(--textColor);
+  border-radius: 5px;
+}

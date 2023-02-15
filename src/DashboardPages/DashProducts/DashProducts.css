@@ -1,0 +1,39 @@
+.dash_products {
+  width: 100%;
+  color: var(--textColor);
+}
+
+.products_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#mainSelection,
+.selectAll:checked {
+  height: 20px;
+  width: 20px;
+}
+
+th {
+  font-family: var(--helvetica_Neu);
+  font-size: var(--font18);
+  text-transform: uppercase;
+  display: flex;
+  letter-spacing: 2px;
+}
+
+td {
+  font-family: var(--roboto);
+  font-size: var(--font18);
+}
+
+tr {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr 2fr 3fr;
+  border-bottom: 1px solid var(--textColor);
+}
+
+.products_table td,
+.products_table th {
+  padding: 20px;
+}

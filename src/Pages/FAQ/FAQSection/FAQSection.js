@@ -13,7 +13,7 @@ const FAQSection = () => {
 
       {
         faq.map(fa => (
-          <div>
+          <div key={fa._id}>
             <h1>{fa.question}
               <span>
                 <AiOutlineMinus />
@@ -24,13 +24,6 @@ const FAQSection = () => {
           </div>
         ))
       }
-      {/* <div>
-        <h1>How can I place an order on your website? <span>
-          <AiOutlineMinus />
-          <AiOutlinePlus />
-        </span></h1>
-        <p> You can place an order on our website by selecting the product you want, adding it to your cart, and proceeding to checkout. Fill in your shipping and payment information, and then submit your order.</p>
-      </div> */}
     </div>
   );
 };

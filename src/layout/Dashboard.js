@@ -10,7 +10,6 @@ import { RiPercentFill } from "react-icons/ri";
 const Dashboard = () => {
 
   const location = useLocation();
-  console.log(location);
 
   return (
     <div className='main_dashboard'>
@@ -27,7 +26,7 @@ const Dashboard = () => {
               <Link className='d_menu' to="/dashboard/products"><MdOutlineProductionQuantityLimits className="dash_icons" /> Products</Link>
               <ol className='sub_menu_dash'>
                 <li>
-                  <Link className='d_menu' to="/dashboard/home">Collections</Link>
+                  <Link className='d_menu' to="/dashboard/collection">Collections</Link>
                 </li>
                 <li>
                   <Link className='d_menu' to="/dashboard/home">Add Products</Link>

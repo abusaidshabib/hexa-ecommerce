@@ -1,30 +1,25 @@
 [
   {
-    "id": 1,
     "title": "Android",
     "description": "Empower your Life.",
     "img": "img1"
   },
   {
-    "id": 2,
     "title": "Beauty Products",
     "description": "Uncover Your Radiant Glow.",
     "img": "img2"
   },
   {
-    "id": 3,
     "title": "Stand Lamb",
     "description": "Get UpTo 10% off.",
     "img": "img3"
   },
   {
-    "id": 4,
     "title": "Sndy Perfume",
     "description": "Get 40% off Per Product",
     "img": "img4"
   },
   {
-    "id": 5,
     "title": "Brand New Laptop",
     "description": "Experience the ultimate performance",
     "img": "img5"

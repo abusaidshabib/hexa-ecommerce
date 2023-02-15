@@ -128,3 +128,11 @@
   color: var(--textColor);
   padding-left: 20px;
 }
+
+.align_mid{
+  display: flex;
+}
+
+.ml{
+  margin-left: 5px;
+}

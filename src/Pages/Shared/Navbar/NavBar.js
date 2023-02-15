@@ -5,6 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { BsCart3 } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
 import { Link } from 'react-router-dom';
+import { AiOutlineDown } from "react-icons/ai";
 
 const NavBar = () => {
   const [search, setSearch] = useState(false);
@@ -35,10 +36,10 @@ const NavBar = () => {
             <Link to="/home" className='menu'>Home</Link>
           </li>
           <li>
-            <Link to="/" className='menu'>Catalog</Link>
+            <Link to="" className='menu align_mid'>Categories<AiOutlineDown className='ml' /></Link>
           </li>
           <li>
-            <Link to="/" className='menu'>New arrivals</Link>
+            <Link to="/" className='menu align_mid'>New arrivals <AiOutlineDown className='ml'/> </Link>
           </li>
           <li>
             <Link to="/about" className='menu'>About</Link>
@@ -63,11 +64,11 @@ const NavBar = () => {
       </div>
       <div className={search ? "search_nav active" : "search_nav"}>
         <input type="search" name="search" id="" />
-        <Link className='search_btn_open' to="">Search</Link> <RxCross1 className='cross_btn' onClick={() => setSearch(!search)}/>
+        <Link className='search_btn_open' to="">Search</Link> <RxCross1 className='cross_btn' onClick={() => setSearch(!search)} />
       </div>
 
       <div className={profile ? "profile_nav active" : "search_nav"}>
-        
+
       </div>
 
       <div className={cart ? "cart_nav active" : "search_nav"}>

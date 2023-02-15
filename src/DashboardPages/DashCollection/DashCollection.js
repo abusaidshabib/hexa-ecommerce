@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import "./DashProducts.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import "./DashCollection.css";
 
-const DashProducts = () => {
-  const [use, setUse] = useState();
-
+const DashCollection = () => {
   const main = () => {
     const allSelection = document.getElementsByClassName("selectAll");
     const main = document.getElementById("mainSelection");
@@ -21,11 +20,14 @@ const DashProducts = () => {
 
   return (
     <div className='dash_products'>
+      <div className='btn_div'>
+        <Link className='dash_btn1' to="">Create new collection</Link>
+      </div>
       <table className='products_table'>
         <tbody>
           <tr>
             <th className='check_dash_field'>
-                <input type="checkbox" name="" id='mainSelection' onClick={main} />
+              <input type="checkbox" name="" id='mainSelection' onClick={main} />
             </th>
             <th>
               Title
@@ -97,4 +99,4 @@ const DashProducts = () => {
   );
 };
 
-export default DashProducts;
+export default DashCollection;

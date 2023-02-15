@@ -5,11 +5,6 @@ export const AuthContext = createContext()
 const UserContext = ({children}) => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    fetch("carousel.json")
-    .then(res => res.json())
-    .then(data => setData(data))
-  }, [])
 
   const value = {data}
 

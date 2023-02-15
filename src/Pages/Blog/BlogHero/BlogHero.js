@@ -12,7 +12,7 @@ const BlogHero = () => {
       <div className='blog_div'>
         {
           blogs.map(blog => (
-            <div className='blog_sec'>
+            <div key={blog._id} className='blog_sec'>
               <img src={blog.img} alt="" />
               <h1>{blog.title}</h1>
               <p>{blog.Description.slice(0, 130)}...</p>

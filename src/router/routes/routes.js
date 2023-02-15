@@ -1,10 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashCollection from "../../DashboardPages/DashCollection/DashCollection";
 import DashHome from "../../DashboardPages/DashHome/DashHome";
+import DashProducts from "../../DashboardPages/DashProducts/DashProducts";
 import Dashboard from "../../layout/Dashboard";
 import Main from "../../layout/Main";
 import About from "../../Pages/About/About/About";
 import Blog from "../../Pages/Blog/Blog/Blog";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
+import CollectionProduct from "../../Pages/CollectionProduct/CollectionProduct";
 import Contact from "../../Pages/Contact/Contact/Contact";
 import FAQ from "../../Pages/FAQ/FAQ/FAQ";
 import Home from "../../Pages/Home/Home/Home";
@@ -51,6 +54,11 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <CheckOut></CheckOut>
+      },
+      {
+        path: "/collection/:name",
+        loader: ({ params }) => fetch(`http://localhost:5000/collection/${params.name}`),
+        element: <CollectionProduct></CollectionProduct>
       }
     ]
   },
@@ -61,6 +69,14 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/home",
         element: <DashHome></DashHome>
+      },
+      {
+        path: "/dashboard/products",
+        element: <DashProducts></DashProducts>
+      },
+      {
+        path: "/dashboard/collection",
+        element: <DashCollection></DashCollection>
       }
     ]
   }

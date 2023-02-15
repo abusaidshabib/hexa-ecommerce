@@ -18,7 +18,7 @@ const HeroSection = () => {
       {heroData.map((obj, index) => {
         return (
           <div
-            key={obj.id}
+            key={obj._id}
             className={`${obj.class} ${slideIndex === index + 1? "active": "" }`}>
             <div className='hero_content'>
               <h1 className='main_title'>{obj.title}</h1>
@@ -31,7 +31,7 @@ const HeroSection = () => {
 
       <div className="navigation">
         {Array.from({ length: 3 }).map((item, index) => (
-          <div
+          <div key={index}
             onClick={() => moveDot(index + 1)}
             className={slideIndex === index + 1 ? "btn active" : "btn"}
           ></div>

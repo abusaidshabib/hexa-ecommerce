@@ -5,6 +5,8 @@ import { FiPhoneCall } from "react-icons/fi";
 import { GrMapLocation } from "react-icons/gr";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
+import { FaFacebook } from 'react-icons/fa';
+import { AiOutlineGithub } from 'react-icons/ai';
 
 const Login = () => {
   return (
@@ -23,7 +25,9 @@ const Login = () => {
 
           <input className='submit_btn_form' type="submit" value="send message" />
         </form>
-        <Link className='icon_btn_text' to=""><FcGoogle className="btn_ico"/> Sign in with Google</Link>
+        <Link className='icon_btn_text' to=""><FcGoogle className="btn_ico" /> Sign in with Google</Link>
+        <Link className='icon_btn_text' to=""><FaFacebook className="btn_ico" /> Sign in with Facebook</Link>
+        <Link className='icon_btn_text' to=""><AiOutlineGithub className="btn_ico" /> Sign in with Github</Link>
         <p className='test_des'>Don't have an account <Link to="" className='forgot_pass'>Sign Up</Link></p>
       </div>
       <div>
