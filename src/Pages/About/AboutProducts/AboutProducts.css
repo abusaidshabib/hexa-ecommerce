@@ -14,9 +14,7 @@
   object-position: center;
 }
 
-.para2{
-  font-size: var(--font18);
-}
+
 
 .about_sec_icons{
   display: flex;

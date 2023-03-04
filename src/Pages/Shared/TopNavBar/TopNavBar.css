@@ -1,0 +1,9 @@
+.top-nav{
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--shadowColor);
+  background-color: var(--hoverColor);
+}

@@ -21,6 +21,9 @@ const FeatureBlog = () => {
           ))
         }
       </div>
+    <div className='button_div_blog'>
+        <Link to="/" className='btn_outline'>Go for more</Link>
+    </div>
     </div>
   );
 };

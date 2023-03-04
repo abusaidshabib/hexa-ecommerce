@@ -18,6 +18,7 @@
   /* Font Size */
   --font10: 1rem;
   --font12: 1.2rem;
+  --font14: 1.4rem;
   --font16: 1.6rem;
   --font18: 1.8rem;
   --font20: 2rem;
@@ -45,6 +46,14 @@
   color: var(--textColor)
 }
 
+.para2{
+  font-size: var(--font18);
+}
+
+.para3{
+  font-size: var(--font14);
+}
+
 .card_title{
   font-size: var(--font16);
   color: var(--textColor);
@@ -69,6 +78,23 @@
   font-weight: 600;
 }
 
+.btn_outline{
+    color: var(--textColor);
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1.2rem 2.8rem;
+      border-radius: 1rem;
+      font-family: var(--helvetica_Neu);
+      font-size: var(--font20);
+    font-weight: 600;
+    border: 1px solid var(--textColor);
+}
+
+.btn_outline:hover{
+  background-color: var(--textColor);
+  color: var(--shadowColor);
+}
+
 
 .App {
   margin: 0;
@@ -79,33 +105,3 @@
 html {
   font-size: 62.5%;
 }
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
