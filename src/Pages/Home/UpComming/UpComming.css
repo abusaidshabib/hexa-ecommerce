@@ -12,7 +12,12 @@
 
 .up_coming_content{
   position: absolute;
-  top: 50%;
+  top: 40%;
   background-color: rgba(0, 0, 0, 0.555);
-  padding: var(--bothGaps);
+  width: 100%;
+  text-align: center;
+}
+
+.up_coming_content .extra_large_title{
+  color: var(--bgColor);
 }

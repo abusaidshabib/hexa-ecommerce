@@ -1,6 +1,6 @@
 .nav_div {
   width: 100%;
-  height: 13vh;
+  height: auto;
   background-color: var(--bgColor);
   color: var(--bgColor);
   position: relative;
@@ -12,15 +12,15 @@
   align-items: center;
   padding: var(--bothGaps);
   background-color: var(--textColor);
-  height: 8vh;
+  height: 70px;
 }
 
 .logo {
   text-decoration: none;
-  color: var(--bgColor);
-  font-size: var(--marginLeft);
+  color: var(--hoverColor);
+  font-size: 3rem;
   font-weight: 700;
-  font-family: var(--philosoper);
+  font-family: var(--title-font);
   line-height: 0;
 }
 
@@ -30,6 +30,8 @@
   background-color: transparent;
   border: none;
   font-size: var(--font24);
+  display: flex;
+  align-items: center;
 }
 
 .icons_div {
@@ -45,15 +47,15 @@
 
 .mega_menu {
   background-color: var(--bgColor);
-  height: 5vh;
-  display: grid;
+  height: 40px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .mega_menu ul {
   display: flex;
-
+  align-items: center;
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
@@ -62,16 +64,17 @@
 
 .mega_menu ul li {
   margin: 0 2.4rem;
-  font-size: 1.6rem;
 }
 
 .menu {
   text-decoration: none;
   color: var(--textColor);
-  font-size: var(--font14);
+  font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-weight: 600;
+  line-height: 1.952rem;
+  font-family: var(--regular-font);
 }
 
 .menu:hover {
@@ -131,6 +134,7 @@
 
 .align_mid{
   display: flex;
+  align-items: center;
 }
 
 .ml{

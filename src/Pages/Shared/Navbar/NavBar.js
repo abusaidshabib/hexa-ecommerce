@@ -17,17 +17,17 @@ const NavBar = () => {
       <div className='main_nav'>
         <Link to="/" className='logo'>HEXA</Link>
         <div className='icons_div'>
-          <button className='nav_main_icons'
+          <Link to="" className='nav_main_icons'
             onClick={() => setSearch(!search)} >
-            <FiSearch className='icon' /></button>
+            <FiSearch className='icon' /></Link>
           <Link to="/dashboard" className='nav_main_icons'
             onClick={() => setProfile(!profile)}>
             <CgProfile className='icon' />
           </Link>
-          <button className='nav_main_icons'
+          <Link to="" className='nav_main_icons'
             onClick={() => setCart(!cart)}>
             <BsCart3 className='icon' />
-          </button>
+          </Link>
         </div>
       </div>
       <div className='mega_menu'>
@@ -42,7 +42,8 @@ const NavBar = () => {
             <Link to="/" className='menu align_mid'>New arrivals <AiOutlineDown className='ml'/> </Link>
           </li>
           <li>
-            <Link to="/about" className='menu'>About</Link>
+            
+              <Link to="/about" className='menu'>About</Link>
           </li>
           <li>
             <Link to="/contact" className='menu'>Contact</Link>

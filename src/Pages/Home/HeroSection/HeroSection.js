@@ -15,14 +15,14 @@ const HeroSection = () => {
   return (
 
     <div className="carousel">
-      {heroData.map((obj, index) => {
+      {heroData.slice(0,3).map((obj, index) => {
         return (
           <div
             key={obj._id}
             className={`${obj.class} ${slideIndex === index + 1? "active": "" }`}>
             <div className='hero_content'>
-              <h1 className='main_title'>{obj.title}</h1>
-              <p className='hero_regular'>{obj.title}</p>
+              <h1 className='hero_title'>{obj.title}</h1>
+              <p className='hero_para'>{obj.paragraph}</p>
               <Link className='btn_type1' to="/">Shop now</Link>
             </div>
           </div>

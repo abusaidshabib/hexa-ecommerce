@@ -1,18 +1,23 @@
 :root {
 
+
   /* All colors */
   --bgExColor: #2D4263;
-  --bgColor: #ECDBBA;
-  --hoverColor: #C84B31;
-  --textColor: #191919;
+  --bgColor: #ECE6CD;
+  --hoverColor: #F9AC67;
+  /* --textColor: #191919; */
+  --textColor: #131112;
   --shadowColor: #EFEFEF;
   --shadowColor1: #c7c7c7;
 
   /* font_family */
   --helvetica_Neu: 'Helvetica Neue',
     sans-serif;
-  --roboto: 'roboto', sans-serif;
-  --philosoper: 'Philosopher',
+  --title-font: 'Syne',
+    sans-serif;
+  --regular-font: 'Inter',
+    sans-serif;
+  --sTitle-font: 'Josefin Sans',
     sans-serif;
 
   /* Font Size */
@@ -30,7 +35,6 @@
   --font48: 4.8rem;
   --font80: 8rem;
 
-
   /* paddings */
   --bothGaps: 0 8rem;
 
@@ -39,60 +43,149 @@
 
 }
 
+html {
+  font-size: 62.5%;
+  line-height: 62.5%;
+  font-family: var(--sTitle-font);
+}
+
 /* Font_sizes */
-.title2{
-  font-size: var(--font34);
-  font-weight: 500;
-  color: var(--textColor)
+.extra_large_title{
+  font-size: 10.4rem;
+  line-height: 12.48rem;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
-.para2{
-  font-size: var(--font18);
+.hero_title {
+  font-size: 7.4rem;
+  line-height: 9rem;
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 700;
 }
 
-.para3{
-  font-size: var(--font14);
+.hero_para {
+  font-size: 2.4rem;
+  line-height: 3.59rem;
 }
 
-.card_title{
-  font-size: var(--font16);
-  color: var(--textColor);
-}
-
-.card_price{
-  font-size: var(--font16);
-  color: var(--textColor);
+.title1 {
+  font-size: 3.4rem;
+  line-height: 5.1rem;
   font-weight: 600;
 }
 
-/* buttons */
+
+.title2 {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.title3{
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-family: var(--title-font);
+  text-transform: uppercase;
+}
+
+.para1 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+.para2 {
+  font-size: 1.6rem;
+  line-height: 1.95rem;
+}
+
+.para3 {
+  font-size: 1.4rem;
+  line-height: 2.09rem;
+  font-family: var(--regular-font);
+  font-weight: 500;
+}
+
+.card_title {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-family: var(--regular-font);
+}
+
+.card_price {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+  font-family: var(--regular-font);
+}
+
+/* buttons--------------------------------------------============ */
 .btn_type1 {
   color: var(--textColor);
   text-decoration: none;
-  background-color: var(--bgColor);
   text-transform: uppercase;
-  padding: 1.2rem 2.8rem;
-  border-radius: 1rem;
+  padding: 10px 22px;
+  border-radius: 5px;
   font-family: var(--helvetica_Neu);
   font-size: var(--font20);
   font-weight: 600;
+  position: relative;
+  z-index: 1;
+  transition: color 0.1s linear;
 }
 
-.btn_outline{
-    color: var(--textColor);
-      text-decoration: none;
-      text-transform: uppercase;
-      padding: 1.2rem 2.8rem;
-      border-radius: 1rem;
-      font-family: var(--helvetica_Neu);
-      font-size: var(--font20);
-    font-weight: 600;
-    border: 1px solid var(--textColor);
+.btn_type1:hover {
 }
 
-.btn_outline:hover{
+.btn_outline {
+  color: var(--textColor);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.2rem 2.8rem;
+  border-radius: 5px;
+  font-family: var(--helvetica_Neu);
+  font-size: var(--font20);
+  font-weight: 600;
+  border: 1px solid var(--textColor);
+}
+
+.btn_type1:hover::before {
+  width: 100%;
+}
+
+.btn_outline:hover {
   background-color: var(--textColor);
   color: var(--shadowColor);
+}
+
+.btn_type1::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: var(--hoverColor);
+  border-radius: 1rem;
+  z-index: -1;
+  transition: all 0.4s linear;
+}
+
+.btn_type1::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: var(--bgColor);
+  border-radius: 1rem;
+  z-index: -2;
 }
 
 
@@ -100,8 +193,4 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
 }

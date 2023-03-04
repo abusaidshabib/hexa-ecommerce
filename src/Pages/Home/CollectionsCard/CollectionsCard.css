@@ -10,6 +10,7 @@
   height: 350px;
   position: relative;
   text-decoration: none;
+  color: var(--textColor);
 }
 
 .collection_img{
@@ -25,7 +26,6 @@
   object-fit: cover;
   object-position: center;
   border-radius: 20px;
-  mix-blend-mode: darken;
 }
 
 .collection_content{
@@ -34,6 +34,6 @@
   padding-left: 30px;
 }
 
-.text_captilize{
+.collection_content .title2{
   text-transform: capitalize;
 }

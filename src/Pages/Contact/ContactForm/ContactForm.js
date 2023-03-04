@@ -8,7 +8,7 @@ const ContactForm = () => {
   return (
     <div className='full_form'>
       <form>
-        <h3 className='title2'>Get In Touch</h3>
+        <h3 className='title1'>Get In Touch</h3>
 
         <label htmlFor="name">Enter Your Name</label><br />
         <input className='input_form_field' type="text" name="name" id="name" placeholder='Enter your Name' required /><br />
@@ -22,7 +22,7 @@ const ContactForm = () => {
         <input className='submit_btn_form' type="submit" value="Send message" />
       </form>
       <div>
-        <h3 className='title2'>Support</h3>
+        <h3 className='title1'>Support</h3>
         <div className='about_sec_icons'>
           <FiPhoneCall />
           <p><b>Phone</b>

@@ -9,7 +9,7 @@ const FAQSection = () => {
 
   return (
     <div className='faq_section'>
-      <h2 className='title2'>FAQs</h2>
+      <h2 className='title1'>FAQs</h2>
 
       {
         faq.map(fa => (

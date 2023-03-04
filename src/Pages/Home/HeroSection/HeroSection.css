@@ -2,7 +2,8 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  background-color: var(--bgColor);
+  color: var(--bgColor);
+  overflow: hidden;
 }
 
 .slider {
@@ -10,8 +11,9 @@
   height: 100%;
   align-items: center;
   position: absolute;
-  display: grid;
-  background-position: top left;
+  display: flex;
+  align-items: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -19,20 +21,12 @@
   clip-path: circle(0% at 0 50%);
 }
 
-.main_title {
-  font-size: 10rem;
-  text-transform: uppercase;
-  font-family: var(--helvetica_Neu);
-  color: var(--bgColor);
-}
-
-.hero_regular {
-  font-size: var(--font22);
-  color: var(--bgColor);
-}
-
 .hero_content {
   padding: var(--bothGaps);
+}
+
+.hero_content .hero_para{
+  padding-bottom: 10px;
 }
 
 .carousel .navigation {
@@ -78,19 +72,19 @@
 }
 
 .slide1 {
-  background-image: url("../../../assets/HeroBackground2.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  background-image: url("../../../assets/HeroSection/1.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.404));
 }
 
 .slide2 {
-  background-image: url("../../../assets/HeroBackground1.jpeg"), linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  background-image: url("../../../assets/HeroSection/2.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.466));
 }
 
 .slide3 {
-  background-image: url("../../../assets/HeroBackground3.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  background-image: url("../../../assets/HeroSection/3.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.541));
 }
 
 .slide4 {
-  background-image: url("../../../assets/HeroBackground1.jpeg"), linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  background-image: url("../../../assets/HeroSection/4.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.2));
 }
 
 .btn.active{

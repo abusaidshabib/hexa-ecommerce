@@ -1,10 +1,10 @@
 .testimonial_div {
   display: grid;
   align-items: center;
-  margin: var(--bothGaps);
+  justify-content: center;
   text-align: center;
-  height: 50vh;
-  text-align: center;
+  height: auto;
+  margin: 30px 80px;
 }
 
 .testimonial_content {
@@ -21,9 +21,11 @@
 }
 
 .ratings_testimonial{
-  font-size: var(--font20);
+  font-size: 2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .icons_test{

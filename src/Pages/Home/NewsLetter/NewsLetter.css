@@ -8,18 +8,10 @@
   text-align: center;
 }
 
-.subscribe_div h1 {
-  font-size: var(--font48);
-}
-
-.subscribe_div p{
-  font-size: var(--font24);
-}
-
 .input_submit{
   background-color: var(--bgColor);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
 }
@@ -27,7 +19,7 @@
 .input_submit .email_input{
   border: none;
   background-color: transparent;
-  width: 80%;
+  width: 100%;
   font-size: var(--font24);
 }
 
@@ -39,12 +31,13 @@
   border: none;
   background-color: var(--textColor);
   color: var(--bgColor);
-  padding: 12px 28px;
-  font-size: var(--font22);
+  padding: 10px 24px;
+  font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
-  border-radius: 10px;
+  border-radius: 5px;
+  font-family: var(--title-font);
 }
 
 .input_submit .submit_btn:hover{

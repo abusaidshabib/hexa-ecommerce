@@ -16,7 +16,7 @@ const CollectionsCard = () => {
             <img src={collection.img} alt="" />
           </div>
           <div className='collection_content'>
-            <h3 className='title2 text_captilize'>{collection.title}</h3>
+            <h3 className='title2'>{collection.title}</h3>
             <p className='card_title'>{collection.description}</p>
           </div>
         </Link>))

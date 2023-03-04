@@ -13,7 +13,7 @@ const Login = () => {
     <div className='full_form'>
       <div>
         <form>
-          <h3 className='title2'>Welcome back to us</h3>
+          <h3 className='title1'>Welcome back to us</h3>
 
           <label htmlFor="name">Enter Your Name</label><br />
           <input className='input_form_field' type="text" name="name" id="name" placeholder='Enter your Name' required /><br />
@@ -31,7 +31,7 @@ const Login = () => {
         <p className='test_des'>Don't have an account <Link to="" className='forgot_pass'>Sign Up</Link></p>
       </div>
       <div>
-        <h3 className='title2'>Support</h3>
+        <h3 className='title1'>Support</h3>
         <div className='about_sec_icons'>
           <FiPhoneCall />
           <p><b>Phone</b>

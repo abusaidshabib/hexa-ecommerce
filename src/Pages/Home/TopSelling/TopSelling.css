@@ -1,12 +1,13 @@
 .top_selling {
   margin: var(--bothGaps);
   padding: 50px 0;
+  color: var(--textColor);
 }
 
 .top_selling_grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
+  grid-gap: 18px;
 }
 
 .card_img_div {
@@ -19,5 +20,5 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 5%;
+  border-radius: 3%;
 }

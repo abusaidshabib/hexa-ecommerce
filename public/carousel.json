@@ -1,17 +1,22 @@
 [
   {
-    "title": "seamless sports leisurewear",
-    "paragraph": "stay organized and secure with our line of instrument bags.",
+    "title": "Design Your Dream",
+    "paragraph": "Let us transform your space into a stylish sanctuary.",
     "class": "slide1 slider"
   },
   {
-    "title": "Protect your instruments ",
-    "paragraph": "Travel in ease with our line.",
+    "title": "Expertly Curated",
+    "paragraph": "Our designers create customized interiors to suit your unique style.",
     "class": "slide2 slider"
   },
   {
-    "title": "Experience of instrument protection",
-    "paragraph": "stay organized and secure with our line of instrument bags.",
+    "title": "Innovative Design Solutions",
+    "paragraph": "Discover fresh, creative ideas to elevate your living space.",
     "class": "slide3 slider"
+  },
+  {
+    "title": "Luxury Redefined",
+    "paragraph": "Experience the ultimate in elegance and sophistication with our design expertise.",
+    "class": "slide4 slider"
   }
 ]
