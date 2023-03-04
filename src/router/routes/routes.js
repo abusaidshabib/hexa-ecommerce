@@ -9,6 +9,7 @@ import Blog from "../../Pages/Blog/Blog/Blog";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 import CollectionProduct from "../../Pages/CollectionProduct/CollectionProduct";
 import Contact from "../../Pages/Contact/Contact/Contact";
+import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import FAQ from "../../Pages/FAQ/FAQ/FAQ";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
         path: "/collection/:name",
         loader: ({ params }) => fetch(`http://localhost:5000/collection/${params.name}`),
         element: <CollectionProduct></CollectionProduct>
+      },
+      {
+        path: "*",
+        element: <ErrorPage></ErrorPage>
       }
     ]
   },
