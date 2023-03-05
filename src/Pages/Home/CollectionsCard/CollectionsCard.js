@@ -8,6 +8,8 @@ const CollectionsCard = () => {
 
   const { collections } = useContext(ApiDataContext);
 
+
+
   return (
     <div className='card_collection'>
       {

@@ -130,11 +130,12 @@ html {
   color: var(--textColor);
   text-decoration: none;
   text-transform: uppercase;
-  padding: 10px 22px;
+  padding: 12px 26px;
   border-radius: 5px;
-  font-family: var(--helvetica_Neu);
-  font-size: var(--font20);
-  font-weight: 600;
+  font-family: var(--Title-font);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
   position: relative;
   z-index: 1;
   transition: color 0.1s linear;

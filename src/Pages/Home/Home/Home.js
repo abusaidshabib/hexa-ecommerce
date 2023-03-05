@@ -3,6 +3,7 @@ import useTitle from '../../../hook/UseTitle/UseTitle';
 import CollectionsCard from '../CollectionsCard/CollectionsCard';
 import FeatureBlog from '../FeatureBlog/FeatureBlog';
 import HeroSection from '../HeroSection/HeroSection';
+import NewArrival from '../NewArrival/NewArrival';
 import NewsLetter from '../NewsLetter/NewsLetter';
 import Testimonial from '../Testimonial/Testimonial';
 import TopSelling from '../TopSelling/TopSelling';
@@ -18,6 +19,7 @@ const Home = () => {
       <TopSelling></TopSelling>
       <CollectionsCard></CollectionsCard>
       <UpComming></UpComming>
+      <NewArrival></NewArrival>
       <Testimonial></Testimonial>
       <FeatureBlog></FeatureBlog>
       <NewsLetter></NewsLetter>

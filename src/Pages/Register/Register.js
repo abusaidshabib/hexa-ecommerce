@@ -14,13 +14,13 @@ const Register = () => {
         <form>
           <h3 className='title1'>Welcome back to us</h3>
 
-          <label htmlFor="name">Enter Your Name</label><br />
+          <label className='title3' htmlFor="name">Enter Your Name</label><br />
           <input className='input_form_field' type="text" name="name" id="name" placeholder='Enter your Name' required /><br />
 
-          <label htmlFor="password">Enter Your Password</label><br />
+          <label className='title3' htmlFor="password">Enter Your Password</label><br />
           <input className='input_form_field' type="password" name="password" id="password" placeholder='Enter Your Password' required /><br />
 
-          <label htmlFor="password">Confirm Your Password</label><br />
+          <label className='title3' htmlFor="password">Confirm Your Password</label><br />
           <input className='input_form_field' type="password" name="cpassword" id="cpassword" placeholder='Confirm Your Password' required /><br />
 
           <input className='submit_btn_form' type="submit" value="send message" />
@@ -34,7 +34,7 @@ const Register = () => {
         <h3 className='title1'>Support</h3>
         <div className='about_sec_icons'>
           <FiPhoneCall />
-          <p><b>Phone</b>
+          <p className='para2'><b className='para1'>Phone</b>
             <br />+1234567890</p>
           <p></p>
 
@@ -42,14 +42,14 @@ const Register = () => {
 
         <div className='about_sec_icons'>
           <HiOutlineMailOpen />
-          <p><b>Email</b>
+          <p className='para2' ><b className='para1'>Email</b>
             <br />info@gmail.com</p>
           <p></p>
         </div>
 
         <div className='about_sec_icons'>
           <GrMapLocation />
-          <p><b>Address</b>
+          <p className='para2' ><b className='para1'>Address</b>
             <br />#123 abc main city</p>
           <p></p>
         </div>

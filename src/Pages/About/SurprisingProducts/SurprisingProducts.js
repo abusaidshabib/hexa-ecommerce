@@ -6,7 +6,7 @@ import surprise2 from "../../../assets/Surprice2.jpg";
 const SurprisingProducts = () => {
   return (
     <div className='surprise_prod'>
-      <h3 className='title2 extra_gaps'>Some surprising attachment with some amazing products</h3>
+      <h3 className='title1 extra_gaps'>Some surprising attachment with some amazing products</h3>
       <div className='img_surprise'>
         <div className='img1_sur_back'>
 

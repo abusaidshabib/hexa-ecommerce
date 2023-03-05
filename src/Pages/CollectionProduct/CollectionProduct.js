@@ -1,16 +1,14 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import SpecialFeatures from '../About/SpecialFeatures/SpecialFeatures';
 import ProductCard from '../Home/TopSelling/ProductCard';
 
 const CollectionProduct = () => {
-  const pathname = window.location.pathname;
-  const collectionName = pathname.replace('/collection/', '');
   const products = useLoaderData();
 
 
   return (
     <div className='top_selling'>
-      <h2 className='title2 text_captilize'>All products of {`${collectionName}`} Collection</h2>
       <div className='top_selling_grid'>
         {
           products.map(product => (
@@ -18,6 +16,7 @@ const CollectionProduct = () => {
           ))
         }
       </div>
+      <SpecialFeatures></SpecialFeatures>
     </div>
   );
 };

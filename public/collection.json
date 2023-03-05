@@ -1,27 +1,33 @@
 [
   {
-    "title": "Android",
+    "title": "Timeless Tradition",
     "description": "Empower your Life.",
-    "img": "img1"
+    "img": "https://images.pexels.com/photos/1080719/pexels-photo-1080719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
-    "title": "Beauty Products",
+    "title": "Classic Elegance",
     "description": "Uncover Your Radiant Glow.",
-    "img": "img2"
+    "img": "https://images.pexels.com/photos/1139784/pexels-photo-1139784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
-    "title": "Stand Lamb",
+    "title": "Luxe Living",
     "description": "Get UpTo 10% off.",
-    "img": "img3"
+    "img": "https://images.pexels.com/photos/8838188/pexels-photo-8838188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
-    "title": "Sndy Perfume",
+    "title": "Coastal charm",
     "description": "Get 40% off Per Product",
-    "img": "img4"
+    "img": "https://images.pexels.com/photos/1571462/pexels-photo-1571462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
-    "title": "Brand New Laptop",
+    "title": "Urban Oasis",
     "description": "Experience the ultimate performance",
-    "img": "img5"
+    "img": "https://images.pexels.com/photos/940298/pexels-photo-940298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  }
+  ,
+  {
+    "title": "Harmony",
+    "description": "Experience the ultimate performance",
+    "img": "https://images.pexels.com/photos/1321290/pexels-photo-1321290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ]

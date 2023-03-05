@@ -5,12 +5,8 @@
   margin: 80px 350px;
 }
 
-.full_form label{
-  font-size: var(--font20);
-  font-weight: 600;
-  letter-spacing: .1rem;
-  line-height: 4rem;
-  font-family: var(--helvetica_Neu);
+.full_form .title1{
+  text-transform: uppercase;
 }
 
 .full_form .input_form_field, textarea{

@@ -15,12 +15,12 @@ const AboutProducts = () => {
           We believe that shopping should be convenient, easy, and most importantly, fun. That's why we have designed our website with user experience in mind. Whether you're shopping for yourself or for someone else, you can find exactly what you're looking for in just a few clicks.</p>
         <div className='about_sec_icons'>
           <FaRegThumbsUp />
-          <p><b>Watche Thickness</b>
+          <p className='para2'><b className='para1'>Watche Thickness</b>
             <br />We want your shopping experience to be as smooth.</p>
         </div>
         <div className='about_sec_icons'>
           <FcLike />
-          <p><b>Water Repellency</b>
+          <p className='para2'><b className='para1'>Water Repellency</b>
             <br />We are committed to providing our customers with a safe.</p>
         </div>
       </div>

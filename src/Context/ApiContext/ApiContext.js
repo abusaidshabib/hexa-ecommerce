@@ -18,26 +18,29 @@ const ApiContext = ({ children }) => {
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then(res => res.json())
-      .then(data => setProducts(data));
+      .then(data => {
+        setProducts(data)
+      });
   }, [])
 
   useEffect(() => {
     fetch("http://localhost:5000/faq")
-    .then(res => res.json())
-    .then(data => setFaq(data))
+      .then(res => res.json())
+      .then(data => setFaq(data))
   }, [])
 
   useEffect(() => {
     fetch("http://localhost:5000/blogs")
-    .then(res => res.json())
-    .then(data => setBlog(data))
+      .then(res => res.json())
+      .then(data => setBlog(data))
   }, [])
 
   useEffect(() => {
     fetch("http://localhost:5000/collections")
-    .then(res=> res.json())
-    .then(data => setCollection(data));
+      .then(res => res.json())
+      .then(data => setCollection(data));
   }, [])
+
 
   const value = {
     heroData, products, faq, blogs, collections
@@ -47,9 +50,6 @@ const ApiContext = ({ children }) => {
     <ApiDataContext.Provider value={value}>
       {children}
     </ApiDataContext.Provider>
-    // <ApiDataContext.Provider value={value}>
-    //   {children}
-    // </ApiDataContext.Provider>
   )
 }
 

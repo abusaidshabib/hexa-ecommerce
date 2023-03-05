@@ -1,24 +1,34 @@
-import React, { useContext, useState } from 'react';
-import { ApiDataContext } from '../../Context/ApiContext/ApiContext';
+import React, { useContext } from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const ErrorPage = () => {
-
-  const { products } = useContext(ApiDataContext);
-  const [data, setData] = useState([])
-
-  const newData = products.map(item => item.collection)
-
-    function removeDuplicates(newData) {
-        return newData.filter((item,
-            index) => newData.indexOf(item) === index);
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
     }
-
-    console.log(removeDuplicates(newData));
-
+  };
   return (
-    <div>
-      
-    </div>
+    <Carousel responsive={responsive}>
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+    </Carousel>
   );
 };
 

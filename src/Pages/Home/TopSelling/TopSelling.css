@@ -22,3 +22,7 @@
   object-position: center;
   border-radius: 3%;
 }
+
+.text-decoration-none{
+  text-decoration: none;
+}

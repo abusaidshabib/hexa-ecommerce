@@ -14,13 +14,9 @@ const FAQSection = () => {
       {
         faq.map(fa => (
           <div key={fa._id}>
-            <h1>{fa.question}
-              <span>
-                <AiOutlineMinus />
-                <AiOutlinePlus />
-              </span>
+            <h1 className='title3'>{fa.question}
             </h1>
-            <p>{fa.answer}</p>
+            <p className='para2'>{fa.answer}</p>
           </div>
         ))
       }

@@ -140,3 +140,28 @@
 .ml{
   margin-left: 5px;
 }
+
+
+
+.arrival_menu{
+  padding: 30px 0;
+  color: var(--textColor);
+}
+
+.category_menu{
+  padding: 30px 0;
+}
+
+.nav_collection{
+  text-decoration: none;
+  color: var(--textColor);
+  padding: 10px;
+  border: 1px solid var(--textColor);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.nav_collection:hover{
+  background-color: var(--textColor);
+  color: var(--bgColor);
+}

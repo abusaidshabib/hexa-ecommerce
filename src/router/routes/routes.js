@@ -14,6 +14,7 @@ import FAQ from "../../Pages/FAQ/FAQ/FAQ";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
+import SingleProductPage from "../../Pages/SingleProductPages/SingleProductPages/SingleProductPage";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,12 @@ const router = createBrowserRouter([
         path: "/collection/:name",
         loader: ({ params }) => fetch(`http://localhost:5000/collection/${params.name}`),
         element: <CollectionProduct></CollectionProduct>
+      },
+
+      {
+        path: "/product/:id",
+        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`),
+        element: <SingleProductPage></SingleProductPage>
       },
       {
         path: "*",
