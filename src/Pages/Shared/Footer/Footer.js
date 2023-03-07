@@ -1,9 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './Footer.css';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP, FaTwitter } from "react-icons/fa";
+import { ApiDataContext } from '../../../Context/ApiContext/ApiContext';
 
 const Footer = () => {
+  const { products, collections } = useContext(ApiDataContext)
+
+  let activeStyle = {
+    color: "var(--hoverColor)",
+  };
+
+
   return (
     <div className='footer card_title'>
       <ul>
@@ -30,30 +38,42 @@ const Footer = () => {
         <li>
           <b>Most Purchase</b>
         </li>
-        {/* 5 most purchase products */}
+        {
+          collections.slice(0, 5).map(collection => (
+            <li key={collection._id}>
+              <NavLink style={({ isActive }) =>
+                isActive ? activeStyle : undefined
+              } to={`/collection/${collection.title}`} className="footer_links">{collection.title}</NavLink>
+            </li>
+          ))
+        }
       </ul>
       <ul>
         <li>
           <b>High Rated</b>
         </li>
-        {/* 5 high rated products */}
-      </ul>
-      <ul>
         <li>
-          <b>Sale Collection</b>
+          {
+            products.slice(0, 5).map(product => (
+              <li key={product._id}>
+                <NavLink to={`/product/${product._id}`} style={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                } className="footer_links">{product.title}</NavLink>
+              </li>
+            ))
+          }
         </li>
-        {/* 5 collections name */}
       </ul>
       <div>
         <b>Newsletter</b>
-        <br/>
-        <input className='footer_input' type="email" name="email" id="" placeholder='Enter Your Email'/>
+        <br />
+        <input className='footer_input' type="email" name="email" id="" placeholder='Enter Your Email' />
         <div className='footer_icons'>
-          <FaFacebookF className='so_icons'/>
-          <FaTwitter className='so_icons'/>
-          <FaInstagram className='so_icons'/>
-          <FaLinkedinIn className='so_icons'/>
-          <FaPinterestP className='so_icons'/>
+          <FaFacebookF className='so_icons' />
+          <FaTwitter className='so_icons' />
+          <FaInstagram className='so_icons' />
+          <FaLinkedinIn className='so_icons' />
+          <FaPinterestP className='so_icons' />
         </div>
       </div>
 

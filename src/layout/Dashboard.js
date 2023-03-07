@@ -20,32 +20,10 @@ const Dashboard = () => {
         <div className='left_nav_Main'>
           <ul>
             <li>
-              <Link className='d_menu' to="/dashboard/home"><HiOutlineHome className='dash_icons' /> Dashboard</Link>
+              <Link className='d_menu' to="/dashboard/products">Products</Link>
             </li>
             <li>
-              <Link className='d_menu' to="/dashboard/products"><MdOutlineProductionQuantityLimits className="dash_icons" /> Products</Link>
-              <ol className='sub_menu_dash'>
-                <li>
-                  <Link className='d_menu' to="/dashboard/collection">Collections</Link>
-                </li>
-                <li>
-                  <Link className='d_menu' to="/dashboard/home">Add Products</Link>
-                </li>
-              </ol>
-            </li>
-            <li>
-              <Link className='d_menu' to="/dashboard/client"><CgProfile className="dash_icons" />  Customers</Link>
-              <ol className='sub_menu_dash'>
-                <li>
-                  <Link className='d_menu' to="/">Companies</Link>
-                </li>
-              </ol>
-            </li>
-            <li>
-              <Link className='d_menu' to="/dashboard/home"><SiSimpleanalytics className="dash_icons" /> Analytics</Link>
-            </li>
-            <li>
-              <Link className='d_menu' to="/dashboard/home" ><RiPercentFill className="dash_icons" />Discount</Link>
+              <Link className='d_menu' to="/dashboard/home">Add Products</Link>
             </li>
           </ul>
           <div className='view_website_dashboard'>

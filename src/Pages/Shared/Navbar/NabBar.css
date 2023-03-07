@@ -32,6 +32,7 @@
   font-size: var(--font24);
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .icons_div {
@@ -164,4 +165,13 @@
 .nav_collection:hover{
   background-color: var(--textColor);
   color: var(--bgColor);
+}
+
+.notification_number{
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--hoverColor);
+  position: absolute;
+  bottom: 0%;
+  left: 90%;
 }

@@ -16,8 +16,9 @@
 
 th {
   font-family: var(--helvetica_Neu);
-  font-size: var(--font18);
-  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  /* text-transform: uppercase; */
   display: flex;
   letter-spacing: 2px;
 }
@@ -29,8 +30,41 @@ td {
 
 tr {
   display: grid;
-  grid-template-columns: 1fr 4fr 2fr 2fr 3fr;
+  grid-template-columns: 4fr 1fr 2fr 4fr;
   border-bottom: 1px solid var(--textColor);
+  justify-content: center;
+  text-align: left;
+}
+
+.delete-dash {
+  border: 1px solid var(--textColor);
+  background-color: transparent;
+  padding: 12px 26px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.delete-dash:hover {
+  background-color: var(--textColor);
+  color: var(--bgColor);
+}
+
+.desable-btn {
+  border: none;
+  background-color: var(--hoverColor);
+  padding: 12px 26px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--textColor);
+}
+
+.desable-btn:hover{
+  background-color: var(--textColor);
+  color: var(--bgColor);
 }
 
 .products_table td,

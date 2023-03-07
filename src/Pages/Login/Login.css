@@ -16,7 +16,7 @@
   color: var(--textColor);
 }
 
-.end{
+.end {
   display: flex;
   justify-content: end;
 }
@@ -30,8 +30,26 @@
   font-size: var(--font22);
   line-height: 60px;
   color: var(--bgExColor);
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 100%;
 }
 
 .forgot_pass:hover {
   text-decoration: none;
+}
+
+.select_form_field {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+  font-size: var(--font20);
+  font-family: var(--roboto);
+  background-color: var(--textColor);
+  color: var(--bgColor);
+  letter-spacing: 1px;
 }

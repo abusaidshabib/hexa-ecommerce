@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import DashCollection from "../../DashboardPages/DashCollection/DashCollection";
 import DashHome from "../../DashboardPages/DashHome/DashHome";
+import DashProductEdit from "../../DashboardPages/DashProductEdit/DashProductEdit";
 import DashProducts from "../../DashboardPages/DashProducts/DashProducts";
 import Dashboard from "../../layout/Dashboard";
 import Main from "../../layout/Main";
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/collection",
         element: <DashCollection></DashCollection>
+      },
+      {
+        path: "/dashboard/product-edit/:id",
+        element: <DashProductEdit></DashProductEdit>
       }
     ]
   }

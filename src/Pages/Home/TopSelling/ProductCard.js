@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({product}) => {
+  
   return (
-    <Link to={`/product/${product.id}`} className="text-decoration-none">
+    <Link to={`/product/${product._id}`} className="text-decoration-none">
       <div className='card_img_div'>
         <img src={product.thumbnail} alt="" />
       </div>

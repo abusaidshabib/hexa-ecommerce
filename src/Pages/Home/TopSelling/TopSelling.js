@@ -7,7 +7,6 @@ import './TopSelling.css';
 const TopSelling = () => {
 
   const { products } = useContext(ApiDataContext)
-  console.log(products);
 
   const responsive = {
     superLargeDesktop: {

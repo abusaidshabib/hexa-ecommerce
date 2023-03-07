@@ -25,4 +25,5 @@
 
 .text-decoration-none{
   text-decoration: none;
+  color: var(--textColor);
 }

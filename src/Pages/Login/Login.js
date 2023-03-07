@@ -1,34 +1,98 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css';
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
 import { GrMapLocation } from "react-icons/gr";
-import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import { FaFacebook } from 'react-icons/fa';
 import { AiOutlineGithub } from 'react-icons/ai';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from '../../Context/UserContext/UserContext';
+import GoogleSignIn from '../Component/GoogleSignIn/GoogleSignIn';
 
 const Login = () => {
+
+  const { logIn, passReset } = useContext(AuthContext);
+  const [err, setErr] = useState(' ');
+  const [forget, setForget] = useState(false);
+  const [email, setEmail] = useState("abusaidshabib712@GrMail.com");
+  console.log(forget);
+
+  console.log(email)
+
+  const handleLogin = event => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+
+    logIn(email, password)
+      .then(result => {
+        const user = result.user;
+        toast("successfully log in")
+      })
+      .catch(error => {
+        console.log(error)
+        setErr(error.message);
+      });
+  }
+
+  const handleReset = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    passReset(email)
+      .then(() => {
+        toast("successfully send email")
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
+  }
+
+
+
   return (
     <div className='full_form'>
       <div>
-        <form>
-          <h3 className='title1'>Welcome back to us</h3>
+        {
+          !forget ?
+            <form onSubmit={handleLogin}>
+              <h3 className='title1'>Welcome back to us</h3>
 
-          <label className='title3' htmlFor="name">Enter Your Name</label><br />
-          <input className='input_form_field' type="text" name="name" id="name" placeholder='Enter your Name' required /><br />
+              <label className='title3' htmlFor="email">Enter Your Email</label><br />
+              <input
+                className='input_form_field' type="email" name="email" id="email" placeholder='Enter your Email' /><br />
 
-          <label className='title3' htmlFor="password">Enter Your Password</label><br />
-          <input className='input_form_field' type="password" name="password" id="password" placeholder='Enter Your Password' required /><br />
 
-          <Link to="" className='forgot_pass end'>Forgot Password</Link>
+              <label className='title3' htmlFor="password">Enter Your Password</label><br />
+              <input className='input_form_field' type="password" name="password" id="password" placeholder='Enter Your Password' /><br />
 
-          <input className='submit_btn_form' type="submit" value="send message" />
-        </form>
-        <Link className='icon_btn_text' to=""><FcGoogle className="btn_ico" /> Sign in with Google</Link>
+              <button onClick={() => setForget(!forget)} className='forgot_pass end'>Forgot Password</button>
+              <input className='submit_btn_form' type="submit" value="Login Now" />
+            </form>
+
+            :
+
+            <form onSubmit={handleReset}>
+              <h3 className='title1'>Send Reset Password Mail</h3>
+
+              <label className='title3' htmlFor="email">Enter Your Email</label><br />
+              <input
+                className='input_form_field' type="email" name="email" id="email" placeholder='Enter your Email' /><br />
+              <input className='submit_btn_form' type="submit" value="Reset Password" />
+            </form>
+        }
+
+        <GoogleSignIn></GoogleSignIn>
+
         <Link className='icon_btn_text' to=""><FaFacebook className="btn_ico" /> Sign in with Facebook</Link>
         <Link className='icon_btn_text' to=""><AiOutlineGithub className="btn_ico" /> Sign in with Github</Link>
-        <p className='test_des'>Don't have an account <Link to="" className='forgot_pass'>Sign Up</Link></p>
+        <p className='test_des'>Don't have an account <Link to="/register" className='forgot_pass'>Sign Up</Link></p>
       </div>
       <div>
         <h3 className='title1'>Support</h3>
@@ -54,6 +118,7 @@ const Login = () => {
           <p></p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

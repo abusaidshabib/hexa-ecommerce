@@ -4,11 +4,12 @@ import { FiSearch } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { BsCart3 } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AiOutlineDown } from "react-icons/ai";
 import Carousel from 'react-multi-carousel';
 import ProductCard from '../../Home/TopSelling/ProductCard';
 import { ApiDataContext } from '../../../Context/ApiContext/ApiContext';
+import { AuthContext } from '../../../Context/UserContext/UserContext';
 
 const NavBar = () => {
   const [search, setSearch] = useState(false);
@@ -16,7 +17,12 @@ const NavBar = () => {
   const [cart, setCart] = useState(false);
   const [newArrival, setNewArrival] = useState(false);
   const [category, setCategory] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
 
+
+  let activeStyle = {
+    color: "var(--hoverColor)",
+  };
 
 
 
@@ -65,16 +71,18 @@ const NavBar = () => {
             onClick={() => setProfile(!profile)}>
             <CgProfile className='icon' />
           </Link>
-          <Link to="" className='nav_main_icons'
-            onClick={() => setCart(!cart)}>
+          <Link to="" className='nav_main_icons'>
             <BsCart3 className='icon' />
+            <p className='notification_number'>0</p>
           </Link>
         </div>
       </div>
       <div className='mega_menu'>
         <ul>
           <li>
-            <Link to="/home" className='menu'>Home</Link>
+            <NavLink to="/home" style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } className='menu'>Home</NavLink>
           </li>
           <li>
             <Link onMouseEnter={funCategory} to="" className='menu align_mid'>Categories<AiOutlineDown className='ml' /></Link>
@@ -84,21 +92,42 @@ const NavBar = () => {
               to="" className='menu align_mid'>New arrivals <AiOutlineDown className='ml' /> </Link>
           </li>
           <li>
-            <Link to="/about" className='menu'>About</Link>
+            <NavLink style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } to="/about" className='menu'>About</NavLink>
           </li>
           <li>
-            <Link to="/contact" className='menu'>Contact</Link>
+            <NavLink style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } to="/contact" className='menu'>Contact</NavLink>
           </li>
           <li>
-            <Link to="/blog" className='menu'>Blogs</Link>
+            <NavLink style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } to="/blog" className='menu'>Blogs</NavLink>
           </li>
           <li>
-            <Link to="/faq" className='menu'>FAQ's</Link>
+            <NavLink style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            } to="/faq" className='menu'>FAQ's</NavLink>
           </li>
-          <li>
-            <Link className='menu' to="/login">Login/</Link>
-            <Link className='menu' to="/register">Register</Link>
-          </li>
+          {
+            user?.uid ?
+              <li>
+                <p onClick={logOut} className="menu"  style={{
+                  cursor: "pointer"
+                }}>LogOut</p>
+              </li>
+              :
+              <li>
+                <NavLink style={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                } className='menu' to="/login">Login/</NavLink>
+                <NavLink style={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                } className='menu' to="/register">Register</NavLink>
+              </li>
+          }
         </ul>
       </div>
       <div className={search ? "search_nav active" : "search_nav"}>

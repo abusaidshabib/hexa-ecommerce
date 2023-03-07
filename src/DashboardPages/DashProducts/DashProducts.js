@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { ApiDataContext } from '../../Context/ApiContext/ApiContext';
 import "./DashProducts.css";
 
 const DashProducts = () => {
   const [use, setUse] = useState();
+  const { products } = useContext(ApiDataContext);
 
   const main = () => {
     const allSelection = document.getElementsByClassName("selectAll");
@@ -24,9 +26,6 @@ const DashProducts = () => {
       <table className='products_table'>
         <tbody>
           <tr>
-            <th className='check_dash_field'>
-                <input type="checkbox" name="" id='mainSelection' onClick={main} />
-            </th>
             <th>
               Title
             </th>
@@ -40,57 +39,25 @@ const DashProducts = () => {
               Go for files
             </th>
           </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="" className='selectAll' />
-            </td>
-            <td>
-              Title1
-            </td>
-            <td>
-              1
-            </td>
-            <td>
-              Delete
-            </td>
-            <td>
-              Go to tde file
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="" className='selectAll' />
-            </td>
-            <td>
-              Title1
-            </td>
-            <td>
-              1
-            </td>
-            <td>
-              Delete
-            </td>
-            <td>
-              Go to tde file
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" name="" className='selectAll' />
-            </td>
-            <td>
-              Title1
-            </td>
-            <td>
-              1
-            </td>
-            <td>
-              Delete
-            </td>
-            <td>
-              Go to tde file
-            </td>
-          </tr>
+          {
+            products.map(product =>
+              <tr>
+                <th>
+                 {product.title}
+                </th>
+                <th>
+                  {product.price}$
+                </th>
+                <th>
+                  <button className='delete-dash'>Edit</button>
+                </th>
+                <th>
+                  <button className='delete-dash'>Active</button>
+                  <button className='desable-btn'>Disable</button>
+                </th>
+              </tr>
+            )
+          }
         </tbody>
       </table>
     </div>
