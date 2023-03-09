@@ -5,11 +5,12 @@ import { CgProfile } from "react-icons/cg";
 import { BsCart3 } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
 import { Link, NavLink } from 'react-router-dom';
-import { AiOutlineDown } from "react-icons/ai";
+import { AiOutlineDown, AiOutlineMenu } from "react-icons/ai";
 import Carousel from 'react-multi-carousel';
 import ProductCard from '../../Home/TopSelling/ProductCard';
 import { ApiDataContext } from '../../../Context/ApiContext/ApiContext';
 import { AuthContext } from '../../../Context/UserContext/UserContext';
+import { GrClose } from 'react-icons/gr';
 
 const NavBar = () => {
   const [search, setSearch] = useState(false);
@@ -18,6 +19,9 @@ const NavBar = () => {
   const [newArrival, setNewArrival] = useState(false);
   const [category, setCategory] = useState(false);
   const { user, logOut } = useContext(AuthContext);
+  const [menuBar, setMenuBar] = useState(false);
+
+  const data = JSON.parse(window.localStorage.getItem('cart'))
 
 
   let activeStyle = {
@@ -59,37 +63,43 @@ const NavBar = () => {
     setCategory(false)
   }
 
+  
+  
   return (
     <div className='nav_div'>
-      <div className='main_nav'>
+      <div className={`main_nav ${menuBar ? "": "display_fixed"}`} >
+        <AiOutlineMenu className='menu_bar' onClick={() => setMenuBar(!menuBar)} />
         <Link to="/" className='logo'>HEXA</Link>
         <div className='icons_div'>
           <Link to="" className='nav_main_icons'
             onClick={() => setSearch(!search)} >
             <FiSearch className='icon' /></Link>
-          <Link to="/dashboard" className='nav_main_icons'
+          <Link to="/dashboard/home" className='nav_main_icons'
             onClick={() => setProfile(!profile)}>
             <CgProfile className='icon' />
           </Link>
-          <Link to="" className='nav_main_icons'>
+          <Link to="/checkout" className='nav_main_icons'>
             <BsCart3 className='icon' />
-            <p className='notification_number'>0</p>
+            <p className='notification_number'>{data? data.length: 0}</p>
           </Link>
         </div>
       </div>
-      <div className='mega_menu'>
+      <div className={`mega_menu ${menuBar ? "" : "display_none"}`}>
         <ul>
+          <li onClick={() => setMenuBar(!menuBar)} className='close_btn'>
+            <GrClose />
+          </li>
           <li>
             <NavLink to="/home" style={({ isActive }) =>
               isActive ? activeStyle : undefined
             } className='menu'>Home</NavLink>
           </li>
           <li>
-            <Link onMouseEnter={funCategory} to="" className='menu align_mid'>Categories<AiOutlineDown className='ml' /></Link>
+            <Link onMouseEnter={funCategory} to="" className='menu align_mid display_none'>Categories<AiOutlineDown className='ml' /></Link>
           </li>
           <li>
             <Link onMouseEnter={funNewArrival}
-              to="" className='menu align_mid'>New arrivals <AiOutlineDown className='ml' /> </Link>
+              to="" className='menu align_mid display_none'>New arrivals <AiOutlineDown className='ml' /> </Link>
           </li>
           <li>
             <NavLink style={({ isActive }) =>
@@ -114,7 +124,7 @@ const NavBar = () => {
           {
             user?.uid ?
               <li>
-                <p onClick={logOut} className="menu"  style={{
+                <p onClick={logOut} className="menu" style={{
                   cursor: "pointer"
                 }}>LogOut</p>
               </li>

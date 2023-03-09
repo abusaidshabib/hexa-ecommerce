@@ -11,17 +11,16 @@ const SingleProductPage = () => {
 
   const productData = useLoaderData();
   const { products } = useContext(ApiDataContext)
-  console.log(products);
 
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 5
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5
+      items: 4
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -50,7 +49,7 @@ const SingleProductPage = () => {
         >
           {
             products.slice(0, 10).map(product => (
-              <ProductCard key={product._id} product={product}></ProductCard>
+              <ProductCard key={product._id}  product={product}></ProductCard>
             ))
           }
         </Carousel>

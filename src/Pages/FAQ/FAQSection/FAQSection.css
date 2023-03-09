@@ -1,5 +1,5 @@
 .faq_section {
-  padding: 50px 350px;
+  padding: 50px 250px;
 }
 
 .faq_section div {
@@ -21,4 +21,17 @@
 .faq_section p{
   padding: 0px 15px;
   font-size: var(--font18);
+}
+
+
+@media screen and (max-width: 1366px) {
+  .faq_section{
+    padding: 50px 150px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .faq_section {
+      padding: 30px;
+    }
 }

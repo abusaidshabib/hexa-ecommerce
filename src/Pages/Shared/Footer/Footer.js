@@ -64,7 +64,7 @@ const Footer = () => {
           }
         </li>
       </ul>
-      <div>
+      <ul>
         <b>Newsletter</b>
         <br />
         <input className='footer_input' type="email" name="email" id="" placeholder='Enter Your Email' />
@@ -75,7 +75,7 @@ const Footer = () => {
           <FaLinkedinIn className='so_icons' />
           <FaPinterestP className='so_icons' />
         </div>
-      </div>
+      </ul>
 
     </div>
   );

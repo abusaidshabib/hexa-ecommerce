@@ -8,6 +8,9 @@ const ApiContext = ({ children }) => {
   const [faq, setFaq] = useState([]);
   const [blogs, setBlog] = useState([]);
   const [collections, setCollection] = useState([]);
+  const [edit, setEdit] = useState([]);
+  const [reviews, setReview] = useState([]);
+  const [cart, setCart] = useState();
 
   useEffect(() => {
     fetch('http://localhost:5000/carousel')
@@ -41,9 +44,15 @@ const ApiContext = ({ children }) => {
       .then(data => setCollection(data));
   }, [])
 
+  useEffect(() => {
+    fetch("http://localhost:5000/reviews")
+    .then(res => res.json())
+    .then(data => setReview(data))
+  })
+
 
   const value = {
-    heroData, products, faq, blogs, collections
+    heroData, products, faq, blogs, collections, setEdit, edit, reviews, cart, setCart
   }
 
   return (

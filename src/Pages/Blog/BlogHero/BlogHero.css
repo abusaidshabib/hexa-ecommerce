@@ -1,5 +1,5 @@
 .margin_blog {
-  margin: 80px 200px;
+  padding: 80px;
 }
 
 .text_center {
@@ -11,6 +11,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+  justify-items: center;
+  align-items: center;
 }
 
 .blog_sec {
@@ -40,4 +42,24 @@
 .read_more_btn:hover {
   color: var(--bgColor);
   background-color: var(--textColor);
+}
+
+@media screen and (max-width: 1640px) {
+  .blog_div{
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1142px) {
+  .blog_div{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .blog_div img{
+    width: 250px;
+    height: 180px;
+  }
 }

@@ -51,7 +51,7 @@ html {
 }
 
 /* Font_sizes */
-.extra_large_title{
+.extra_large_title {
   font-size: 10.4rem;
   line-height: 12.48rem;
   font-weight: 600;
@@ -86,7 +86,7 @@ html {
   letter-spacing: 1px;
 }
 
-.title3{
+.title3 {
   font-size: 2rem;
   line-height: 3rem;
   letter-spacing: 1px;
@@ -141,8 +141,7 @@ html {
   transition: color 0.1s linear;
 }
 
-.btn_type1:hover {
-}
+.btn_type1:hover {}
 
 .btn_outline {
   color: var(--textColor);
@@ -195,4 +194,49 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+
+@media screen and (max-width: 1366px) {
+  html {
+    font-size: 58%;
+    line-height: 58%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 55%;
+    line-height: 55%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 50%;
+    line-height: 50%;
+  }
+
+  :root {
+    --bothGaps: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 45%;
+    line-height: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 40%;
+    line-height: 40%;
+  }
+}
+
+.checkout-div{
+  padding: var(--bothGaps);
 }

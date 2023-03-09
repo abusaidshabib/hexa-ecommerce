@@ -1,10 +1,14 @@
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ApiDataContext } from '../../Context/ApiContext/ApiContext';
 import "./DashProducts.css";
 
 const DashProducts = () => {
   const [use, setUse] = useState();
-  const { products } = useContext(ApiDataContext);
+  const { products, setEdit, edit } = useContext(ApiDataContext);
+
+  console.log(edit)
+  
 
   const main = () => {
     const allSelection = document.getElementsByClassName("selectAll");
@@ -40,8 +44,8 @@ const DashProducts = () => {
             </th>
           </tr>
           {
-            products.map(product =>
-              <tr>
+            products.map((product, id) =>
+              <tr key={id}>
                 <th>
                  {product.title}
                 </th>
@@ -49,7 +53,7 @@ const DashProducts = () => {
                   {product.price}$
                 </th>
                 <th>
-                  <button className='delete-dash'>Edit</button>
+                  <Link className='delete-dash' onClick={() => setEdit(product)} to="/dashboard/product-edit" >Edit</Link>
                 </th>
                 <th>
                   <button className='delete-dash'>Active</button>

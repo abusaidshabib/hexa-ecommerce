@@ -1,7 +1,8 @@
 .about_brands{
   text-align: center;
-  margin: 50px 300px;
+  padding: var(--bothGaps);
 }
+
 
 .margin_bottom{
   margin-bottom: 80px;

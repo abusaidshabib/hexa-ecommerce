@@ -92,7 +92,7 @@ const router = createBrowserRouter([
         element: <DashCollection></DashCollection>
       },
       {
-        path: "/dashboard/product-edit/:id",
+        path: "/dashboard/product-edit",
         element: <DashProductEdit></DashProductEdit>
       }
     ]

@@ -12,3 +12,11 @@
 .feature_icons{
   font-size: var(--font48);
 }
+
+@media screen and (max-width: 650px) {
+
+  .SpecialFeature_div{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}

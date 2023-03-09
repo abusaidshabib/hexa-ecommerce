@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
 import { GrMapLocation } from "react-icons/gr";
@@ -21,6 +21,9 @@ const Register = () => {
   const [cpass, setCPass] = useState();
   const [wrongPass, setWrongPass] = useState(false);
   const [select, setSelect] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
 
   const checkPass = () => {
@@ -37,6 +40,7 @@ const Register = () => {
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
+
     console.log(name, email, pass, select);
 
 
@@ -50,7 +54,8 @@ const Register = () => {
           .then(() => {
             verify()
               .then(() => {
-                // newUser(email, name, select);
+                newUser(email, name, select);
+                navigate(from, { replace: true });
               })
               .catch(error => console.log(error));
           })
@@ -66,7 +71,7 @@ const Register = () => {
       category: select
     }
     console.log(newreg);
-    fetch('', {
+    fetch('http://localhost:5000/user', {
       method: "POST",
       headers: {
         "content-type": "application/json"

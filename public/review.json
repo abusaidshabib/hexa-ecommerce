@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Doe Smith",
+    "img":"https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+    "review": "It’s Mecca of all the sports enthusiasts. One stop shop for all your sports need.<br />The variety of equipments you need for any of your favourite sport is here. The quality of products is also good."
+  },
+  {
+    "name": "John Smith",
+    "img":"https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "review": "I absolutely loved the service I received! The team was so helpful and friendly, and they went above and beyond to make sure I was satisfied with the results. I would highly recommend them to anyone looking for top-notch service."
+  },
+  {
+    "name": "Jane Doe",
+    "img":"https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "review": "I was blown away by the quality of the product I received. It exceeded my expectations in every way, and I couldn't be happier with my purchase. The customer service was also fantastic, and they made the whole process a breeze. Thank you!"
+  },
+  {
+    "name": "Bob Johnson",
+    "img":"https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
+    "review": "I had a great experience with this company. The staff was professional and knowledgeable, and they were able to answer all of my questions. The product was also of high quality and exactly what I was looking for. I would definitely recommend them to anyone in need of their services."
+  },
+  {
+    "name": "Sarah Lee",
+    "img":"https://images.unsplash.com/photo-1500048993953-d23a436266cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+    "review": "I was hesitant to try this service at first, but I'm so glad I did. The team was incredibly helpful and made the whole process easy and stress-free. The end result was exactly what I wanted, and I couldn't be happier. I would definitely use them again in the future."
+  }
+]

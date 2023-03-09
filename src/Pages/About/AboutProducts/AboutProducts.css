@@ -1,6 +1,6 @@
 .about_products{
-  height: 80vh;
-  margin: 0px 300px;
+  height: auto;
+  padding: var(--bothGaps);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -33,4 +33,19 @@
 
 .about_sec_icons .para2 {
   padding-left: 10px;
+}
+
+@media screen and (max-width: 1080px) {
+  .about_products{
+    padding: 30px;
+    grid-gap: 20px
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about_products {
+    padding: 30px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
 }
