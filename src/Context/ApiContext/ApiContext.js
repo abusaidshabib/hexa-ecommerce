@@ -15,7 +15,11 @@ const ApiContext = ({ children }) => {
   useEffect(() => {
     fetch('http://localhost:5000/carousel')
       .then(res => res.json())
-      .then(data => setHeroData(data))
+      .then(data => {
+        setHeroData(data)
+        const storeData = [];
+        localStorage.setItem("cart", JSON.stringify(storeData))
+      })
   }, [])
 
   useEffect(() => {
@@ -46,14 +50,15 @@ const ApiContext = ({ children }) => {
 
   useEffect(() => {
     fetch("http://localhost:5000/reviews")
-    .then(res => res.json())
-    .then(data => setReview(data))
+      .then(res => res.json())
+      .then(data => setReview(data))
   })
 
 
   const value = {
     heroData, products, faq, blogs, collections, setEdit, edit, reviews, cart, setCart
   }
+
 
   return (
     <ApiDataContext.Provider value={value}>

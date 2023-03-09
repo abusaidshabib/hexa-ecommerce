@@ -20,6 +20,7 @@ const NavBar = () => {
   const [category, setCategory] = useState(false);
   const { user, logOut } = useContext(AuthContext);
   const [menuBar, setMenuBar] = useState(false);
+  const [sSearch, saveSearch] = useState();
 
   const data = JSON.parse(window.localStorage.getItem('cart'))
 
@@ -80,7 +81,7 @@ const NavBar = () => {
           </Link>
           <Link to="/checkout" className='nav_main_icons'>
             <BsCart3 className='icon' />
-            <p className='notification_number'>{data? data.length: 0}</p>
+            <p className='notification_number'>{data? data.length: "0"}</p>
           </Link>
         </div>
       </div>
@@ -142,16 +143,16 @@ const NavBar = () => {
       </div>
       <div className={search ? "search_nav active" : "search_nav"}>
         <input type="search" name="search" id="" />
-        <Link className='search_btn_open' to="">Search</Link> <RxCross1 className='cross_btn' onClick={() => setSearch(!search)} />
-      </div>
-
-      <div className={profile ? "profile_nav active" : "search_nav"}>
-
-      </div>
-
-      <div className={cart ? "cart_nav active" : "search_nav"}>
-        <input type="search" name="search" id="" />
-        <Link className='search_btn_open' to="/">Search</Link>
+        <Link onChange={(e) => { saveSearch(e.target.value)}} className='search_btn_open' to="">Search</Link> <RxCross1 className='cross_btn' onClick={() => setSearch(!search)} />
+        {products
+          ?.filter((product) => {
+            return sSearch?.toLowerCase() === ""
+              ? []
+              : product?.title.toLowerCase().includes(sSearch);
+          }).map(product => (
+            <ProductCard key={product._id} product={product}></ProductCard>
+          ))
+        }
       </div>
       {
         newArrival && <div className='arrival_menu' onMouseLeave={() => setNewArrival(false)}>

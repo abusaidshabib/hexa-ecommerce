@@ -236,7 +236,3 @@ html {
     line-height: 40%;
   }
 }
-
-.checkout-div{
-  padding: var(--bothGaps);
-}

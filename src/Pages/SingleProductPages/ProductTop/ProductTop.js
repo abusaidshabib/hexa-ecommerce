@@ -8,7 +8,6 @@ const ProductTop = ({ productData }) => {
   const [amount, setAmount] = useState(1);
   const [cart, setCart] = useState([]);
   const [warning, setWarning] = useState(false);
-  const storeData = [];
 
   const notLess = () => {
     if (amount >= 2) {
@@ -18,7 +17,11 @@ const ProductTop = ({ productData }) => {
   }
 
 
+
   const addToCart = (items) => {
+
+    const storeData = JSON.parse(window.localStorage.getItem("cart"))
+
     const newData = {
       ...items, amount
     }
@@ -30,15 +33,12 @@ const ProductTop = ({ productData }) => {
     })
 
     if (isPresent) {
-      setWarning(true);
-      setTimeout(() => {
-        setWarning(false)
-      }, 2000);
-
+      return;
     }
-
-    storeData.push(newData);
-    localStorage.setItem("cart", JSON.stringify(storeData))
+    else {
+      storeData.push(newData);
+      localStorage.setItem("cart", JSON.stringify(storeData))
+    }
   }
 
   const responsive = {
