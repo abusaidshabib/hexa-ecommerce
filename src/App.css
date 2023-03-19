@@ -141,8 +141,6 @@ html {
   transition: color 0.1s linear;
 }
 
-.btn_type1:hover {}
-
 .btn_outline {
   color: var(--textColor);
   text-decoration: none;

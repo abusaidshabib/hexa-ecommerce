@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ApiDataContext } from '../../Context/ApiContext/ApiContext';
 import "./CheckOut.css";
 
 const CheckOut = () => {
 
-  const products = JSON.parse(window.localStorage.getItem("cart"))
+  const { setPayFor } = useContext(ApiDataContext);
+  const products = JSON.parse(window.localStorage.getItem("newCart"))
 
   return (
     <div className='checkout-div'>
@@ -18,12 +20,12 @@ const CheckOut = () => {
         </tr>
         {
           products?.map(product =>
-            <tr>
+            <tr key={product._id}>
               <th>{product.title}</th>
               <th>{product.price}$</th>
               <th>{product.amount}</th>
               <th>
-                <Link to="" className='btn_type1'>PAY</Link>
+                <Link to={`/dashboard/payment/${product._id}`} className='btn_type1' onClick={() => setPayFor(product)}>PAY</Link>
               </th>
             </tr>
           )

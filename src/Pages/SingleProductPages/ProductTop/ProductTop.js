@@ -1,44 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { ApiDataContext } from '../../../Context/ApiContext/ApiContext';
 import "./Product.css";
 
 const ProductTop = ({ productData }) => {
 
-  const [amount, setAmount] = useState(1);
+
   const [cart, setCart] = useState([]);
   const [warning, setWarning] = useState(false);
+  const { handleAddToCart, setAmount, amount } = useContext(ApiDataContext);
 
   const notLess = () => {
     if (amount >= 2) {
       setAmount(amount - 1)
     }
 
-  }
-
-
-
-  const addToCart = (items) => {
-
-    const storeData = JSON.parse(window.localStorage.getItem("cart"))
-
-    const newData = {
-      ...items, amount
-    }
-
-    let isPresent = false;
-    cart.forEach((product) => {
-      if (items._id === product._id)
-        isPresent = true;
-    })
-
-    if (isPresent) {
-      return;
-    }
-    else {
-      storeData.push(newData);
-      localStorage.setItem("cart", JSON.stringify(storeData))
-    }
   }
 
   const responsive = {
@@ -91,7 +68,7 @@ const ProductTop = ({ productData }) => {
         <p className='para1'>{productData.description}</p>
 
         <div className='product_cart_btn-done'>
-          <button className='add-to-cart' onClick={() => addToCart(productData)}>add to cart</button>
+          <button className='add-to-cart' onClick={() => handleAddToCart(productData)}>add to cart</button>
           <button className='buy-now'>buy it now</button>
         </div>
       </div>

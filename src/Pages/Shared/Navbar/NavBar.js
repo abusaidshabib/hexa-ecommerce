@@ -15,14 +15,13 @@ import { GrClose } from 'react-icons/gr';
 const NavBar = () => {
   const [search, setSearch] = useState(false);
   const [profile, setProfile] = useState(false);
-  const [cart, setCart] = useState(false);
   const [newArrival, setNewArrival] = useState(false);
   const [category, setCategory] = useState(false);
   const { user, logOut } = useContext(AuthContext);
   const [menuBar, setMenuBar] = useState(false);
   const [sSearch, saveSearch] = useState();
 
-  const data = JSON.parse(window.localStorage.getItem('cart'))
+  const data = JSON.parse(window.localStorage.getItem('newCart'))
 
 
   let activeStyle = {
@@ -63,6 +62,9 @@ const NavBar = () => {
     setNewArrival(true)
     setCategory(false)
   }
+
+
+  
 
   
   

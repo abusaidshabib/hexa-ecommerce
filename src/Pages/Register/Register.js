@@ -71,7 +71,7 @@ const Register = () => {
       category: select
     }
     console.log(newreg);
-    fetch('http://localhost:5000/user', {
+    fetch('https://hexabazaar-abusaidshabib.vercel.app/user', {
       method: "POST",
       headers: {
         "content-type": "application/json"

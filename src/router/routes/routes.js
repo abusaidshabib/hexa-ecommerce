@@ -3,6 +3,7 @@ import DashCollection from "../../DashboardPages/DashCollection/DashCollection";
 import DashHome from "../../DashboardPages/DashHome/DashHome";
 import DashProductEdit from "../../DashboardPages/DashProductEdit/DashProductEdit";
 import DashProducts from "../../DashboardPages/DashProducts/DashProducts";
+import Payment from "../../DashboardPages/Payment/Payment";
 import Dashboard from "../../layout/Dashboard";
 import Main from "../../layout/Main";
 import About from "../../Pages/About/About/About";
@@ -10,6 +11,7 @@ import Blog from "../../Pages/Blog/Blog/Blog";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 import CollectionProduct from "../../Pages/CollectionProduct/CollectionProduct";
 import Contact from "../../Pages/Contact/Contact/Contact";
+import ErrorElement from "../../Pages/ErrorElement/ErrorElement";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 import FAQ from "../../Pages/FAQ/FAQ/FAQ";
 import Home from "../../Pages/Home/Home/Home";
@@ -60,14 +62,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/collection/:name",
-        loader: ({ params }) => fetch(`http://localhost:5000/collection/${params.name}`),
+        loader: ({ params }) => fetch(`https://hexabazaar-abusaidshabib.vercel.app/collection/${params.name}`),
         element: <CollectionProduct></CollectionProduct>
       },
 
       {
         path: "/product/:id",
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`),
+        loader: ({ params }) => fetch(`https://hexabazaar-abusaidshabib.vercel.app/product/${params.id}`),
         element: <SingleProductPage></SingleProductPage>
+      },
+      {
+        path: "/dashboard/payment/:id",
+        element: <Payment></Payment>,
+        loader: ({ params }) => fetch(`https://hexabazaar-abusaidshabib.vercel.app/product/${params.id}`)
       },
       {
         path: "*",
@@ -78,6 +85,7 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
+    errorElement: <ErrorElement></ErrorElement>,
     children: [
       {
         path: "/dashboard/home",
