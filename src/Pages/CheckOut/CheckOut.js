@@ -22,7 +22,7 @@ const CheckOut = () => {
           products?.map(product =>
             <tr key={product._id}>
               <th>{product.title}</th>
-              <th>{product.price}$</th>
+              <th>{product.price * product.amount}$</th>
               <th>{product.amount}</th>
               <th>
                 <Link to={`/dashboard/payment/${product._id}`} className='btn_type1' onClick={() => setPayFor(product)}>PAY</Link>
