@@ -1,6 +1,7 @@
 .slider {
   overflow: hidden;
   position: relative;
+  height: 500px;
 }
 
 .slider .slide {
@@ -12,31 +13,7 @@
   background-size: cover;
   background-position: center;
   animation: slider 12.5s infinite;
-}
-
-.slider .slide:nth-child(1) {
-  background-image: url("https://images.unsplash.com/photo-1595356700395-6f14b5c1f33f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80");
-  animation-delay: 0s;
-}
-
-.slider .slide:nth-child(2) {
-  background-image: url("https://images.unsplash.com/photo-1591019052241-e4d95a5dc3fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80");
-  animation-delay: -2.5s;
-}
-
-.slider .slide:nth-child(3) {
-  background-image: url("https://images.unsplash.com/photo-1543373014-cfe4f4bc1cdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80");
-  animation-delay: -5s;
-}
-
-.slider .slide:nth-child(4) {
-  background-image: url("https://images.unsplash.com/photo-1517430554953-a5ba4678fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80");
-  animation-delay: -7.5s;
-}
-
-.slider .slide:nth-child(5) {
-  background-image: url("https://images.unsplash.com/photo-1583161178154-c362b3459d29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80");
-  animation-delay: -10s;
+  z-index: 0;
 }
 
 @keyframes slider {
@@ -54,4 +31,29 @@
     transform: translateX(100%);
     animation-timing-function: ease;
   }
+}
+
+@keyframes text-loop-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.infinite-left-to-right {
+  animation: 25s linear infinite reverse text-loop-left;
+}
+
+.infinite-text-loop {
+  background: linear-gradient(
+    320deg,
+    rgba(61, 78, 172, 1) 16%,
+    rgba(183, 51, 174, 1) 46%,
+    rgba(218, 159, 51, 1) 87%
+  );
+  overflow-x: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
