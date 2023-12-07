@@ -7,13 +7,17 @@ import img6 from "../assets/HomePage/image6.jpg";
 import img7 from "../assets/HomePage/image7.jpg";
 import img8 from "../assets/HomePage/image8.jpg";
 import img9 from "../assets/HomePage/image9.jpg";
-import cat1 from "../assets/Category/blackpodium.jpg";
-import cat2 from "../assets/Category/camera.jpg";
-import cat3 from "../assets/Category/facecare.jpg";
-import cat4 from "../assets/Category/glass.jpg";
+import cat1 from "../assets/Category/blackpodium.png";
+import cat2 from "../assets/Category/camera.png";
+import cat3 from "../assets/Category/facecare.png";
+import cat4 from "../assets/Category/glass.png";
 import cat5 from "../assets/Category/headphone.png";
-import cat6 from "../assets/Category/headphone2.jpg";
-import cat7 from "../assets/Category/iphone.jpg";
+import cat6 from "../assets/Category/headphone2.png";
+import cat7 from "../assets/Category/iphone.png";
+import col1 from "../assets/Collection/Android.jpg";
+import col2 from "../assets/Collection/Bags.jpg";
+import col3 from "../assets/Collection/Headphone.jpg";
+import col4 from "../assets/Collection/faceProduct.jpg";
 
 export const menu = [
   {
@@ -160,6 +164,51 @@ export const category = [
   {
     id: 7,
     image: cat7,
-    title: "Mobiles"
-  }
+    title: "Mobiles",
+  },
+];
+
+export const collection = [
+  {
+    id: 1,
+    image: col1,
+    title: "Android World",
+    subTitle: "Unleashing the Infinite Possibilities of the Android Universe",
+  },
+  {
+    id: 2,
+    image: col2,
+    title: "Carry in Style",
+    subTitle:
+      "Discover Fashionable Functionality with Our Trendsetting Bag Designs",
+  },
+  {
+    id: 3,
+    image: col3,
+    title: "Harmony in Sound",
+    subTitle:
+      "Immerse Yourself in a Symphony of Precision and Style with Our Premium Range of Headphones",
+  },
+  {
+    id: 4,
+    image: col4,
+    title: "Radiant Reverie",
+    subTitle:
+      "Discover the Artistry of Timeless Beauty with Our Exquisite Collection",
+  },
+];
+
+export const collectionName = [
+  {
+    id: 0,
+    title: "Devices",
+  },
+  {
+    id: 1,
+    title: "Beauty Product",
+  },
+  {
+    id: 2,
+    title: "Fashions",
+  },
 ];

@@ -7,7 +7,7 @@ const ProductCategory = () => {
         <div key={data?.id}>
           <div className="w-36 h-36 rounded-full border">
             <img
-              className="w-full h-full object-cover rounded-full"
+              className="w-full h-full object-cover rounded-full hover:scale-125 transition duration-500 cursor-pointer"
               src={data?.image}
               alt=""
             />

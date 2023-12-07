@@ -19,6 +19,7 @@ export default {
         dark1: "#212121",
         dark2: "#130F32",
         light1: "#DFDEE0",
+        light2: "#999999",
       },
     },
   },
