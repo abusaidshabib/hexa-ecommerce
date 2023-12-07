@@ -7,6 +7,13 @@ import img6 from "../assets/HomePage/image6.jpg";
 import img7 from "../assets/HomePage/image7.jpg";
 import img8 from "../assets/HomePage/image8.jpg";
 import img9 from "../assets/HomePage/image9.jpg";
+import cat1 from "../assets/Category/blackpodium.jpg";
+import cat2 from "../assets/Category/camera.jpg";
+import cat3 from "../assets/Category/facecare.jpg";
+import cat4 from "../assets/Category/glass.jpg";
+import cat5 from "../assets/Category/headphone.png";
+import cat6 from "../assets/Category/headphone2.jpg";
+import cat7 from "../assets/Category/iphone.jpg";
 
 export const menu = [
   {
@@ -115,7 +122,44 @@ export const heroBtm = [
   {
     id: 5,
     image: img9,
-    title:
-      "Excellent Condition",
+    title: "Excellent Condition",
   },
+];
+
+export const category = [
+  {
+    id: 1,
+    image: cat6,
+    title: "Wired Headphone",
+  },
+  {
+    id: 2,
+    image: cat2,
+    title: "Camera",
+  },
+  {
+    id: 3,
+    image: cat3,
+    title: "Face Care",
+  },
+  {
+    id: 4,
+    image: cat4,
+    title: "Sunglasses",
+  },
+  {
+    id: 5,
+    image: cat5,
+    title: "Headphone",
+  },
+  {
+    id: 6,
+    image: cat1,
+    title: "Black Podium",
+  },
+  {
+    id: 7,
+    image: cat7,
+    title: "Mobiles"
+  }
 ];
