@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
             className="h-[325px] p-14 bg-light3 rounded-lg flex justify-center select-none"
           >
             <Link>
-              <img className="h-full object-contain" src={data} alt="" />
+              <img className="h-full object-contain select-none" src={data} alt="" />
             </Link>
           </SwiperSlide>
         ))}
