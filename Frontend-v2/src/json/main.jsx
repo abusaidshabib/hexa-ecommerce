@@ -279,5 +279,24 @@ export const collectionFeatures = [
     id: 5,
     title: "Perfume Panache",
     subtitle: "Scented Stories: Find Your Signature Fragrance",
+    img: collectionImg5,
+    excss: "col-span-2"
+  },
+];
+
+export const collection2 = [
+  {
+    id: 1,
+    title: "Bag Collection",
+    subtitle: "Explore Elegance: Unveil the Latest in Chic Carryalls",
+    img: collectionImg1,
+    link: "Shop Now",
+  },
+  {
+    id: 2,
+    title: "Curology Essentials",
+    subtitle: "Your Personalized Skincare Journey Begins Here",
+    img: collectionImg2,
+    link: "Shop Now",
   },
 ];

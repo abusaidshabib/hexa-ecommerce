@@ -1,9 +1,10 @@
-import { features } from "../../../json/main";
+import ImageWithText from "../../../components/ImageWithText";
+import { collectionFeatures, features } from "../../../json/main";
 
 const FeaturesAndCollection = () => {
   return (
-    <div>
-      <div className="grid grid-cols-4 gap-10 px-20 py-10">
+    <div className="px-20">
+      <div className="grid grid-cols-4 gap-10 py-10">
         {features.map((data, index) => (
           <div key={index} className="flex items-center gap-5">
             <div className="text-4xl">{data?.icon}</div>
@@ -14,10 +15,10 @@ const FeaturesAndCollection = () => {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-3">
-        {
-            
-        }
+      <div className="grid grid-cols-3 gap-5">
+        {collectionFeatures.map((data, index) => (
+          <ImageWithText key={index} {...data} />
+        ))}
       </div>
     </div>
   );

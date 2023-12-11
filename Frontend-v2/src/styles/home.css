@@ -57,3 +57,13 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.swiper-but-prev {
+  position: absolute;
+  left: 0;
+}
+
+.swiper-but-next {
+  position: absolute;
+  right: 0;
+}

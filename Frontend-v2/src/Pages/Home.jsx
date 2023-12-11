@@ -8,6 +8,9 @@ import TopSellingProducts from "../features/Main/Home/TopSellingProducts";
 import qoutes from "../assets/HomePage/travel1.jpg";
 import qoutes1 from "../assets/HomePage/quotes2.jpg";
 import FeaturesAndCollection from "../features/Main/Home/FeaturesAndCollection";
+import TopSellingBrand from "../features/Main/Home/TopSellingBrand";
+import ProductShort from "../features/Main/Home/ProductShort";
+import ProductVideo from "../features/Main/Home/ProductVideo";
 
 const Home = () => {
   return (
@@ -27,6 +30,10 @@ const Home = () => {
         qoutes="Your Ultimate Destination for Exclusive Shopping Delights!"
       />
       <FeaturesAndCollection/>
+      <TopSellingBrand/>
+      <OfferInfinite/>
+      <ProductShort/>
+      <ProductVideo/>
     </div>
   );
 };

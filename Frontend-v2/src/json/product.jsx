@@ -107,6 +107,7 @@ export const products = [
     description:
       "Immerse yourself in high-quality audio with the Corsair HS70 Wireless Gaming Headset, designed for gamers seeking a premium audio experience.",
     price: 129.99,
+    size: ['xs','s','m','l'],
     currency: "USD",
     category: "Electronics",
     manufacturer: "Corsair",
