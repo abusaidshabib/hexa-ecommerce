@@ -18,6 +18,16 @@ import col1 from "../assets/Collection/Android.jpg";
 import col2 from "../assets/Collection/Bags.jpg";
 import col3 from "../assets/Collection/Headphone.jpg";
 import col4 from "../assets/Collection/faceProduct.jpg";
+import { IoGiftOutline } from "react-icons/io5";
+import { TiMessageTyping } from "react-icons/ti";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { MdSecurity } from "react-icons/md";
+import collectionImg1 from "../assets/Collection/BagCol2.jpg";
+import collectionImg2 from "../assets/Collection/CurologyCol2.jpg";
+import collectionImg3 from "../assets/Collection/ParfumCol2.jpg";
+import collectionImg4 from "../assets/Collection/glassbottleCol2.jpg";
+import collectionImg5 from "../assets/Collection/headPhoneCol2.jpg";
 
 export const menu = [
   {
@@ -210,5 +220,64 @@ export const collectionName = [
   {
     id: 2,
     title: "Fashions",
+  },
+];
+
+export const features = [
+  {
+    id: 0,
+    title: "Surprise Gifts",
+    subTitle: "Because Everyone Loves a Little Extra",
+    icon: <IoGiftOutline />,
+  },
+  {
+    id: 1,
+    title: "Instant Chat Assistance",
+    subTitle: "Connect with Us Anytime, Anywhere",
+    icon: <TiMessageTyping />,
+  },
+  {
+    id: 2,
+    title: "Global Shipping",
+    subTitle: "Bringing the World to Your Doorstep",
+    icon: <AiOutlineGlobal />,
+  },
+  {
+    id: 3,
+    title: "Fortified Security",
+    subTitle: "Advanced Encryption for a Safe and Secure Shopping Experience",
+    icon: <MdSecurity />,
+  },
+];
+
+export const collectionFeatures = [
+  {
+    id: 1,
+    title: "Bag Collection",
+    subtitle: "Explore Elegance: Unveil the Latest in Chic Carryalls",
+    img: collectionImg1,
+  },
+  {
+    id: 2,
+    title: "Curology Essentials",
+    subtitle: "Your Personalized Skincare Journey Begins Here",
+    img: collectionImg2,
+  },
+  {
+    id: 3,
+    title: "Glass Bottle Elegance",
+    subtitle: "Sip in Style: Elevate Your Hydration with Glass",
+    img: collectionImg3,
+  },
+  {
+    id: 4,
+    title: "Headphone Harmony",
+    subtitle: "Immerse Yourself: Discover Sonic Perfection",
+    img: collectionImg4,
+  },
+  {
+    id: 5,
+    title: "Perfume Panache",
+    subtitle: "Scented Stories: Find Your Signature Fragrance",
   },
 ];

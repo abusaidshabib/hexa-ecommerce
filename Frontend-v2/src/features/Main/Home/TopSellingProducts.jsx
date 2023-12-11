@@ -37,7 +37,7 @@ const TopSellingProducts = () => {
         {products.slice(0, 5).map((data) => (
           <div key={data?.id}>
             <ProductCard product={data} />
-            <Link className="">
+            <Link className="select-none">
               <div className="py-5">
                 <p className="text-sm">{data?.name}</p>
                 <p className="text-sm font-bold">${data?.price}</p>

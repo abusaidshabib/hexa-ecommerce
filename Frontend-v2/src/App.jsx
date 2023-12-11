@@ -4,7 +4,7 @@ import router from "./router/Router/router";
 
 function App() {
   return (
-    <div className="font-robo">
+    <div className="font-robo select-none">
       <RouterProvider router={router} />
     </div>
   );

@@ -32,7 +32,7 @@ const ProductCard = ({ product }) => {
         {product?.images?.map((data, index) => (
           <SwiperSlide
             key={index}
-            className="h-[325px] p-14 bg-light3 rounded-lg flex justify-center"
+            className="h-[325px] p-14 bg-light3 rounded-lg flex justify-center select-none"
           >
             <Link>
               <img className="h-full object-contain" src={data} alt="" />

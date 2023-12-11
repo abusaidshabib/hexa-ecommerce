@@ -7,6 +7,7 @@ import ShoppingQuotes from "../features/Main/Home/ShoppingQuotes";
 import TopSellingProducts from "../features/Main/Home/TopSellingProducts";
 import qoutes from "../assets/HomePage/travel1.jpg";
 import qoutes1 from "../assets/HomePage/quotes2.jpg";
+import FeaturesAndCollection from "../features/Main/Home/FeaturesAndCollection";
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
         img={qoutes1}
         qoutes="Your Ultimate Destination for Exclusive Shopping Delights!"
       />
+      <FeaturesAndCollection/>
     </div>
   );
 };
