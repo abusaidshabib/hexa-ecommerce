@@ -6,24 +6,24 @@ import LargeStylish from "../../../components/buttons/LargeStylish";
 
 const ProductShort = () => {
   let data = products[2];
+  const [quantity, setQuantity] = useState(0);
   const [size, setSize] = useState({
     index: 0,
-    value: "",
-    quantity: 0,
+    value: ""
   });
   const handleValue = (value, index) => {
     setSize({ index, value });
   };
 
   const quantityPlus = () => {
-    setSize((prev) => ({ ...prev, quantity: size.quantity + 1 }));
+    setQuantity(quantity + 1)
   };
 
   const quantityMinus = () => {
-    if (size.quantity === 0) {
-      setSize((prev) => ({ ...prev, quantity: 0 }));
+    if (quantity === 0) {
+      setQuantity(0);
     } else {
-      setSize((prev) => ({ ...prev, quantity: size.quantity - 1 }));
+      setQuantity(quantity - 1);
     }
   };
   return (
@@ -62,7 +62,7 @@ const ProductShort = () => {
           <p className="pb-2">Select Quantity</p>
           <div className="flex pt-2 border border-light2 w-32 p-2 justify-between items-center">
             <HiOutlineMinus className="text-2xl" onClick={quantityMinus} />
-            <p>{size.quantity}</p>
+            <p>{quantity}</p>
             <GoPlus className="text-2xl" onClick={quantityPlus} />
           </div>
         </div>
