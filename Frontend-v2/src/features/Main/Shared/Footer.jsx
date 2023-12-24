@@ -3,7 +3,7 @@ import { footer } from "../../../json/menu";
 
 const Footer = () => {
   return (
-    <div className="bg-dark3 px-20 py-10">
+    <div className="bg-dark3 px-20 py-10 text-sm">
       <div className="border-light2 border-b pb-10 grid grid-cols-6">
         <Logo css="text-light1" />
         <p className="text-light2 col-span-5 flex justify-end items-center">

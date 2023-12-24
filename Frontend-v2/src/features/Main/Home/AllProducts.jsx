@@ -20,15 +20,15 @@ const AllProducts = () => {
         <p className="text-2xl pb-5 font-semibold">All Products</p>
         <div className="grid grid-cols-3 gap-5 pt-8">
           {products.slice(0, 6).map((data) => (
-            <div key={data?.id}>
+            <Link to="/product" key={data?.id}>
               <ProductCard product={data} />
-              <Link className="">
+              <div className="">
                 <div className="py-5">
-                  <p className="text-sm">{data?.name}</p>
+                  <p className="text-sm hover:text-blue-700 hover:underline">{data?.name}</p>
                   <p className="text-sm font-bold">${data?.price}</p>
                 </div>
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,4 +1,5 @@
-import Home from "../../Pages/Home";
+import Home from "../../Pages/Main/Home";
+import SingleProduct from "../../Pages/Main/SingleProduct";
 import Main from "../../layout/Main";
 
 const MainRoute = [
@@ -13,6 +14,10 @@ const MainRoute = [
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/product",
+        element: <SingleProduct />,
       },
     ],
   },

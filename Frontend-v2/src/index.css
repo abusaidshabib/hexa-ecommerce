@@ -8,3 +8,7 @@
   --light1: #dfdee0;
   --light2: #999999;
 }
+
+html{
+  scroll-behavior: smooth;
+}
