@@ -1,0 +1,23 @@
+.checkout-div {
+  padding: var(--bothGaps);
+  text-align: center;
+  width: auto;
+}
+
+.checkout-div table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--textColor);
+}
+
+.checkout-div tr{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.checkout-div th{
+  padding: 20px 0;
+}

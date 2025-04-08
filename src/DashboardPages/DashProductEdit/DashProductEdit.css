@@ -1,0 +1,5 @@
+.edit-form{
+  display: grid;
+  justify-items: center;
+  padding: 50px 0;
+}

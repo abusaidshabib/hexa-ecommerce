@@ -1,0 +1,38 @@
+.top_selling {
+  margin: var(--bothGaps);
+  padding: 50px 0;
+  color: var(--textColor);
+}
+
+
+.card_img_div {
+  width: 320px;
+  height: 320px;
+}
+
+.card_img_div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3%;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+@media screen and (max-width: 1800px) {
+  .card_img_div {
+    width: 254px;
+    height: 254px;
+  }
+
+}
+
+@media screen and (max-width: 628px) {
+  .top_selling{
+    text-align: center;
+  }
+}
