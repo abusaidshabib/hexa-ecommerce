@@ -1,12 +1,49 @@
-# React + Vite
+body,html {
+margin: 0;
+font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+background: #000;
+}
+ul {
+margin: 150px auto 0;
+padding: 0;
+list-style: none;
+display: table;
+width: 600px;
+text-align: center;
+}
+li {
+display: table-cell;
+position: relative;
+padding: 15px 0;
+}
+a {
+color: #fff;
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: 0.15em;
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+display: inline-block;
+padding: 15px 20px;
+position: relative;
+}
+a:after {  
+ background: none repeat scroll 0 0 transparent;
+bottom: 0;
+content: "";
+display: block;
+height: 2px;
+left: 50%;
+position: absolute;
+background: #fff;
+transition: width 0.3s ease 0s, left 0.3s ease 0s;
+width: 0;
+}
+a:hover:after {
+width: 100%;
+left: 0;
+}
+@media screen and (max-height: 300px) {
+ul {
+margin-top: 40px;
+}
+}
