@@ -1,0 +1,25 @@
+.feature_blog {
+  background-color: var(--bgColor);
+  padding: 50px 80px;
+}
+
+.button_div_blog {
+  display: flex;
+  align-items: end;
+  justify-content: right;
+}
+
+.feature_blog .para3 {
+  padding-bottom: 20px;
+}
+
+
+/* @media screen and (max-width: 1024px) {
+  .feature_blog {
+    padding: 30px;
+  }
+
+  .feature_blog .title1 {
+    text-align: center;
+  }
+} */

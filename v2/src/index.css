@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark1: #212121;
+  --dark2: #130f32;
+  --light1: #dfdee0;
+  --light2: #999999;
+}
+
+html{
+  scroll-behavior: smooth;
+}

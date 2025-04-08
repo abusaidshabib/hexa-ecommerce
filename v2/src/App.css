@@ -1,0 +1,45 @@
+.button1-a::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+}
+
+.button1-a::after {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+.button1-a:hover::before {
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  border-radius: 0%;
+}
+
+.button1-a:hover::after {
+  content: "dummy";
+  color: black;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  border-radius: 0%;
+}

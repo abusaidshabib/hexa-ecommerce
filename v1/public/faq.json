@@ -1,0 +1,34 @@
+[
+  {
+    "question":"How can I place an order on your website?",
+    "answer":"You can place an order on our website by selecting the product you want, adding it to your cart, and proceeding to checkout. Fill in your shipping and payment information, and then submit your order."
+  },
+  {
+    "question": "What payment methods do you accept?",
+    "answer": "We accept major credit cards, PayPal, and other secure online payment methods."
+  },
+  {
+    "question": "How long does shipping take and what are the shipping options?",
+    "answer": "Shipping time depends on your location and the shipping option you choose. We offer standard and expedited shipping options. You can check the estimated delivery time during checkout."
+  },
+  {
+    "question": "Do you offer free shipping?",
+    "answer": "Yes, we offer free shipping on orders above a certain amount. The amount depends on your location and the shipping option you choose."
+  },
+  {
+    "question": "What is your return policy?",
+    "answer": "We have a 30-day return policy. If you are not satisfied with your purchase, you can return the product in its original condition for a full refund."
+  },
+  {
+    "question": "How do I track my order?",
+    "answer": "You can track your order by logging into your account and checking the order status. You will also receive tracking information via email once your order has shipped."
+  },
+  {
+    "question": "Can I cancel or modify an order?Can I cancel or modify an order?",
+    "answer": "If your order has not been shipped, you can cancel or modify it by contacting our customer service team. If your order has already been shipped, you will need to wait until you receive it and then initiate a return."
+  },
+  {
+    "question": "What if I receive a damaged product?",
+    "answer": "If you receive a damaged product, please contact our customer service team immediately. We will work with you to resolve the issue and ensure you receive a replacement product as quickly as possible."
+  }
+]
