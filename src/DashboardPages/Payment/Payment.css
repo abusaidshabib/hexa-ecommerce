@@ -1,0 +1,18 @@
+.pay_height{
+  width: 100%;
+  min-height: 50vh;
+  height: auto;
+  text-align: center;
+}
+
+.payment_card_form{
+  padding: var(--bothGaps);
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color: green;
+}
