@@ -1,5 +1,6 @@
 import Home from "../../Pages/Main/Home";
 import SingleProduct from "../../Pages/Main/SingleProduct";
+import LoginPage from "../../features/Main/LoginPage";
 import Main from "../../layout/Main";
 
 const MainRoute = [
@@ -20,6 +21,10 @@ const MainRoute = [
         element: <SingleProduct />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
   },
 ];
 

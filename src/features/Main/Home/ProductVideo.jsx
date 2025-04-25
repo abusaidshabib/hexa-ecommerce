@@ -8,7 +8,7 @@ const ProductVideo = () => {
     <div className="overflow-x-hidden h-[500px]">
       <ReactPlayer
         url={url}
-        playing={true}
+        playing={false}
         controls={true}
         width="100%"
         height="100%"
